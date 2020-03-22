@@ -1,0 +1,90 @@
+@import '../../color.scss';
+.sidenav {
+  background: $mainColorDark;
+  height: 100%;
+  padding: 20px 25px;
+  box-sizing: border-box;
+}
+.hamburger {
+  outline: none;
+  display: none;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 30px;
+}
+/** Brand **/
+.brand-name {
+  font-size: 1.5rem;
+  color: white;
+  display: block;
+}
+/** Menu section **/
+.menu-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 3rem;
+  .item {
+    padding: 0;
+    margin-top: 20px;
+    .link {
+      text-decoration: none;
+      color: $sideNavText;
+      font-size: 1.5rem;
+      &.active {
+        color: white;
+      }
+    }
+  }
+}
+
+/*--------- Landscape Devices ---------*/
+/***** LG Devices *****/
+@media (min-width: 1200px) and (orientation: landscape){
+
+}
+/***** MD Devices*****/
+@media (min-width: 993px) and (max-width: 1199px) and (orientation: landscape){
+
+}
+/***** SM Devices *****/
+@media (min-width: 768px) and (max-width: 992px) and (orientation: landscape){
+
+}
+/***** XS Devices *****/
+@media (min-width: 480px) and (max-width: 767px) and (orientation: landscape){
+  .hamburger {
+    display: inline-block;
+  }
+}
+/***** XXS Devices *****/
+@media (max-width: 479px) and (orientation: landscape){
+  .hamburger {
+    display: inline-block;
+  }
+}
+/*--------- Portrait Devices ---------*/
+/***** LG Devices *****/
+@media (min-width: 1200px) and (orientation: portrait){
+
+}
+/***** MD Devices*****/
+@media (min-width: 993px) and (max-width: 1199px) and (orientation: portrait){
+
+}
+/***** SM Devices *****/
+@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait){
+
+}
+/***** XS Devices *****/
+@media (min-width: 480px) and (max-width: 767px) and (orientation: portrait){
+  .hamburger {
+    display: inline-block;
+  }
+}
+/***** XXS Devices *****/
+@media (max-width: 479px) and (orientation: portrait){
+  .hamburger {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,31 @@
+<section class="sidenav">
+  <!-- Brand Section -->
+  <div class="brand">
+    <button class="hamburger hamburger--slider"
+            type="button"
+            (click)="toggleMenu()"
+            [ngClass]="{
+              'is-active': isActive
+            }">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <span class="brand-name">Bill Chen</span>
+  </div>
+  <!-- Menu -->
+  <ul class="menu-wrapper">
+    <li class="item">
+      <a routerLink="/" routerLinkActive="active" class="link" aria-label="home">Home</a>
+    </li>
+    <li class="item">
+      <a routerLink="/works" routerLinkActive="active" class="link" aria-label="my works">My Works</a>
+    </li>
+    <li class="item">
+      <a routerLink="/css" routerLinkActive="active" class="link" aria-label="css works">CSS Works</a>
+    </li>
+    <li class="item">
+      <a routerLink="/about" routerLinkActive="active" class="link" aria-label="about">About</a>
+    </li>
+  </ul>
+</section>
