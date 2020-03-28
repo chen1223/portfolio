@@ -1,20 +1,16 @@
 @import '../../color.scss';
 .sidenav {
-  background: $mainColorDark;
   height: 100%;
-  padding: 20px 25px;
-  box-sizing: border-box;
+  width: 100%;
 }
-.hamburger {
-  outline: none;
+
+/** Brand **/
+.brand {
+  text-align: center;
   display: none;
 }
-.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-  width: 30px;
-}
-/** Brand **/
 .brand-name {
-  font-size: 1.5rem;
+  font-size: 1.5em;
   color: white;
   display: block;
 }
@@ -23,14 +19,14 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  margin-top: 3rem;
+  margin-top: 6em;
   .item {
     padding: 0;
-    margin-top: 20px;
+    margin-bottom: 2em;
     .link {
       text-decoration: none;
       color: $sideNavText;
-      font-size: 1.5rem;
+      font-size: 1.8em;
       &.active {
         color: white;
       }
@@ -38,53 +34,35 @@
   }
 }
 
-/*--------- Landscape Devices ---------*/
-/***** LG Devices *****/
-@media (min-width: 1200px) and (orientation: landscape){
-
-}
-/***** MD Devices*****/
-@media (min-width: 993px) and (max-width: 1199px) and (orientation: landscape){
-
-}
-/***** SM Devices *****/
-@media (min-width: 768px) and (max-width: 992px) and (orientation: landscape){
-
-}
-/***** XS Devices *****/
-@media (min-width: 480px) and (max-width: 767px) and (orientation: landscape){
-  .hamburger {
-    display: inline-block;
+@media (orientation: landscape) {
+  @media (min-width: 650px) and (max-width: 999px) {
+    .brand {
+      display: block;
+    }
+    .menu-wrapper {
+      text-align: center;
+      margin-top: 2em;
+      .item {
+        margin-bottom: 1.2em;
+        .link {
+          font-size: 1.4em;
+        }
+      }
+    }
   }
-}
-/***** XXS Devices *****/
-@media (max-width: 479px) and (orientation: landscape){
-  .hamburger {
-    display: inline-block;
-  }
-}
-/*--------- Portrait Devices ---------*/
-/***** LG Devices *****/
-@media (min-width: 1200px) and (orientation: portrait){
-
-}
-/***** MD Devices*****/
-@media (min-width: 993px) and (max-width: 1199px) and (orientation: portrait){
-
-}
-/***** SM Devices *****/
-@media (min-width: 768px) and (max-width: 992px) and (orientation: portrait){
-
-}
-/***** XS Devices *****/
-@media (min-width: 480px) and (max-width: 767px) and (orientation: portrait){
-  .hamburger {
-    display: inline-block;
-  }
-}
-/***** XXS Devices *****/
-@media (max-width: 479px) and (orientation: portrait){
-  .hamburger {
-    display: inline-block;
+  @media (min-width: 1000px) {
+    .brand {
+      display: block;
+      text-align: left;
+    }
+    .menu-wrapper {
+      margin-top: 3em;
+      .item {
+        margin-bottom: 1.5em;
+        .link {
+          font-size: 1.6em;
+        }
+      }
+    }
   }
 }

@@ -7,13 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SidenavComponent implements OnInit {
 
-  isActive: boolean = false;
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  toggleMenu() {
-    this.isActive = !this.isActive;
-  }
+
 }

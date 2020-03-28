@@ -1,5 +1,24 @@
 <div class="layout">
-    <app-sidenav class="sidenav"></app-sidenav>
-    <!-- Main page content -->
-    <router-outlet></router-outlet>
+  <header
+    class="header">
+    <button
+      class="hamburger hamburger--slider"
+      type="button"
+      (click)="toggleMenu()"
+      [ngClass]="{
+        'is-active': isActive
+      }">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+    <span class="brand-name">Bill Chen</span>
+  </header>
+  <app-sidenav
+    class="sidenav"
+    [ngClass]="{
+      'open': isActive
+    }"></app-sidenav>
+  <!-- Main page content -->
+  <router-outlet></router-outlet>
 </div>

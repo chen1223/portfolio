@@ -1,15 +1,94 @@
-:host {
-  min-height: 100%;
-  min-height: 100vh;
-}
+@import '../../color.scss';
 .layout {
   min-height: 100%;
   min-height: 100vh;
-  display: flex;
+  overflow-x: hidden;
+  background: $mainColor;
   .sidenav {
-    width: 200px;
+    position: absolute;
+    top: 0px;
+    min-height: 100vh;
+    left: 0;
+    right: 0;
+    padding: 1.5em;
+    background: $mainColorDark;
   }
   .page-container {
     height: 100%;
+  }
+}
+/*** Header Section ***/
+.header {
+  text-align: center;
+  z-index: 10;
+  position: relative;
+  padding: 1.5em;
+}
+.hamburger {
+  outline: none;
+  padding: .5em 0;
+  position: absolute;
+  top: 1.5em;
+  left: 1.5em;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+}
+.hamburger.is-active .hamburger-inner,
+.hamburger.is-active .hamburger-inner::before,
+.hamburger.is-active .hamburger-inner::after {
+  background-color: white;
+}
+.brand-name {
+  font-size: 1.5em;
+  color: white;
+  display: block;
+}
+/*** Sidenav ***/
+.sidenav {
+  transform: translateX(-100%);
+  transition: .45s ease-in;
+  z-index: 8;
+  &.open {
+    transform: translateX(0);
+  }
+}
+@media (orientation: portrait) {
+  @media (min-width: 1000px) {
+    .layout {
+      .sidenav {
+        padding: 1.5em 3em;
+      }
+    }
+    .hamburger {
+      left: 3em;
+    }
+    .header {
+      padding: 1.5em 3em;
+    }
+  }
+}
+
+@media (orientation: landscape) {
+  @media (min-width: 650px) and (max-width: 999px) {
+    .brand-name {
+      display: none;
+    }
+  }
+  @media (min-width: 1000px) {
+    .layout {
+      display: flex;
+      .sidenav {
+        transform: translateX(0);
+        position: static;
+        max-width: 200px;
+        width: 25%;
+      }
+    }
+    .header {
+      display: none;
+    }
   }
 }

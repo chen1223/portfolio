@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./container.component.scss']
 })
 export class ContainerComponent implements OnInit {
-
+  isActive: boolean = false;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  toggleMenu() {
+    this.isActive = !this.isActive;
+  }
 }
