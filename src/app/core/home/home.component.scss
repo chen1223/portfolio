@@ -1,4 +1,9 @@
 @import '../../color.scss';
+:ng-deep {
+  .layout {
+    background: $mainColor;
+  }
+}
 :host {
   width: 100%;
   background: $mainColor;
@@ -6,6 +11,7 @@
 .home-container {
   padding: 0 1.5em;
   margin-top: 2em;
+  height: 100%;
 }
 .title {
   margin: 0;

@@ -3,7 +3,10 @@
   min-height: 100%;
   min-height: 100vh;
   overflow-x: hidden;
-  background: $mainColor;
+  background: $mainColorLight;
+  &.home-page {
+    background: $mainColor;
+  }
   .sidenav {
     position: absolute;
     top: 0px;
@@ -20,15 +23,17 @@
 /*** Header Section ***/
 .header {
   text-align: center;
-  z-index: 10;
   position: relative;
   padding: 1.5em;
+  background: $mainColor;
+  min-height: 80px;
 }
 .hamburger {
   outline: none;
   padding: .5em 0;
   padding-top: .3em;
   position: absolute;
+  z-index: 10;
   top: 1.5em;
   left: 1.5em;
 }
@@ -46,6 +51,9 @@
   font-size: 1.5em;
   color: white;
   display: block;
+  font-weight: 600;
+  position: relative;
+  z-index: 9;
 }
 /*** Sidenav ***/
 .sidenav {

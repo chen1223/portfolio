@@ -1,4 +1,7 @@
-<div class="layout">
+<div class="layout"
+     [ngClass]="{
+       'home-page': isHomePage
+     }">
   <header
     class="header">
     <button
@@ -16,6 +19,7 @@
   </header>
   <app-sidenav
     class="sidenav"
+    (OnItemClick)="toggleMenu()"
     [ngClass]="{
       'open': isActive
     }"></app-sidenav>

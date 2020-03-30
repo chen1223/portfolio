@@ -1,4 +1,5 @@
-@import 'https://fonts.googleapis.com/css?family=Poppins:400,600,900&display=swap';
+@import 'https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,900&display=swap';
+@import './app/color.scss';
 body {
   margin: 0;
 }
@@ -6,8 +7,22 @@ body {
   font-family: 'Poppins', sans-serif;
   box-sizing: border-box;
 }
-.inner-page-wrapper {
-  height: 100%;
+a {
+  text-decoration: none;
+}
+.page-wrapper {
+  padding-bottom: 2em;
+  .inner-page-wrapper {
+    padding: 0 1.5em;
+    max-width: 1200px;
+    margin: auto;
+  }
+}
+.page-title {
+  color: $titleColor;
+  font-size: 2em;
+  margin-bottom: 1.3em;
+  font-weight: 700;
 }
 @media (orientation: landscape) {
   @media (min-width: 1000px) {

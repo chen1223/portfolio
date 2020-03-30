@@ -13,6 +13,10 @@ const routes: Routes = [
         path: '',
         pathMatch: 'full',
         component: HomeComponent
+      },
+      {
+        path: 'works',
+        loadChildren: () => import('../work/work.module').then(m => m.WorkModule)
       }
     ]
   }

@@ -1,0 +1,113 @@
+@import '../../color.scss';
+:host {
+  flex: 1;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+li {
+  padding: 0;
+}
+.work {
+  margin-bottom: 3em;
+}
+.preview {
+  width: 100%;
+  max-width: 100%;
+}
+.work-title {
+  display: block;
+  font-weight: 500;
+  color: #333;
+  font-size: 1em;
+  text-align: center;
+  margin-top: .2em;
+}
+.img-wrapper {
+  min-height: 250px;
+  background: $imgLoadingBg;
+  position: relative;
+  overflow: hidden;
+  &.img-loaded {
+    background: unset;
+    min-height: unset;
+    display: block;
+    .cloud {
+      display: none;
+    }
+  }
+}
+.cloud.--bottom {
+  top: unset;
+  bottom: -5%;
+  left: -100%;
+  opacity: 0;
+  animation: cloud 2s .5s linear infinite;
+  transform: scale(.5);
+}
+.cloud {
+  animation: cloud 2.5s linear infinite;
+  margin: auto;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: white;
+  position: absolute;
+  top: calc(50% - 75px);
+  left: calc(50% - 75px);
+  transform: scale(.3);
+  box-shadow:
+    -6.2em 1em 0em -2em white,
+    6.2em 1em 0em -2em white;
+  &:before {
+    content: '';
+    background: white;
+    position: absolute;
+    left: -40%;
+    right: -40%;
+    bottom: 0;
+    height: 70%;
+    border-radius: 50%;
+    border-bottom-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+  }
+}
+@keyframes cloud {
+  0% {
+    opacity: .8;
+    left: -5%;
+    box-shadow:
+      -6.2em 1em 0em -2em white,
+      6.2em 1em 0em -2em white;
+  }
+  50% {
+    height: 148px;
+    box-shadow:
+      -6.6em 1em 0em -2.2em white,
+      6.5em 0.6em 0em -1.9em white;
+  }
+  100% {
+    opacity: .2;
+    left: 100%;
+    height: 155px;
+    box-shadow:
+      -6.5em 0.6em 0em -2.1em white,
+       6.6em 1em 0em -2.2em white;
+  }
+}
+
+@media (min-width: 768px) {
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .work {
+      width: calc(50% - 1em);
+      margin-bottom: 2em;
+    }
+  }
+}
+@media (orientation: portrait) {
+}
