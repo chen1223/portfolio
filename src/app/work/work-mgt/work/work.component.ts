@@ -1,6 +1,6 @@
 import { WorkService } from './../../work.service';
 import { ActivatedRoute } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
 import * as moment from 'moment';
 
 @Component({
@@ -13,7 +13,8 @@ export class WorkComponent implements OnInit {
   workID;
   workData;
 
-  constructor(private activatedRoute: ActivatedRoute,
+  constructor(private renderer: Renderer2,
+              private activatedRoute: ActivatedRoute,
               private workService: WorkService) { }
 
   ngOnInit(): void {
@@ -28,8 +29,14 @@ export class WorkComponent implements OnInit {
 
   // Get work data
   getWorkData() {
-    this.workData = this.workService.getWork(this.workID);
-    this.workData.date = moment(this.workData.date, 'YYYY-MM').format('MMMM YYYY');
-    console.log('work data', this.workData);
+    this.workService.getWork(this.workID)
+        .subscribe(data => {
+          this.workData = data;
+          this.workData.date = moment(this.workData.date, 'YYYY-MM').format('MMMM YYYY');
+        });
+  }
+
+  imgLoadComplete(el: ElementRef) {
+    this.renderer.addClass(el, 'loaded');
   }
 }

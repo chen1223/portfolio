@@ -27,6 +27,7 @@
       text-decoration: none;
       color: $sideNavText;
       font-size: 1.8em;
+      display: block;
       &.active {
         color: white;
       }

@@ -16,7 +16,10 @@ export class WorkMgtComponent implements OnInit {
   }
 
   getWorks(): void {
-    this.works = this.workService.getAllWorks();
+    this.workService.getAllWorks()
+        .subscribe(data => {
+          this.works = data;
+        });
   }
 
   imgLoadComplete(wrapper: ElementRef) {

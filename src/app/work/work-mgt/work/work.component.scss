@@ -27,13 +27,15 @@
   position: relative;
   margin: 5em 0;
   margin-bottom: 8em;
+  img.loaded {
+    border: .5px solid #707070;
+  }
   .desktop {
     width: 80%;
     max-width: 80%;
     margin-left: auto;
     display: block;
     z-index: 1;
-    border: .5px solid #707070;
   }
   .tablet {
     width: 33%;
@@ -41,8 +43,7 @@
     z-index: 2;
     position: absolute;
     left: 10%;
-    bottom: -25%;
-    border: .5px solid #707070;
+    bottom: -2em;
   }
   .mobile {
     width: 15%;
@@ -50,8 +51,7 @@
     z-index: 3;
     position: absolute;
     left: 2%;
-    bottom: -35%;
-    border: .5px solid #707070;
+    bottom: -3.5em;
   }
 }
 /*** Date section ***/
@@ -60,7 +60,7 @@
   justify-content: space-between;
   .date-title {
     color: #555;
-    font-weight: 500;
+    font-weight: 600;
   }
   .date {
     color: #333;
@@ -97,6 +97,209 @@
       }
       .tech-text {
         font-weight: 600;
+      }
+    }
+  }
+}
+/*** GIF Section ***/
+.gif {
+  margin: 4em 0;
+  img.loaded {
+    border: .5px solid #707070;
+  }
+  .desktop {
+    width: 100%;
+    max-width: 100%;
+  }
+  .gif-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 3em;
+    .tablet {
+      width: calc(66% - .5em);
+      max-width: calc(66% - .5em);
+    }
+    .mobile {
+      width: calc(33% - .5em);
+      max-width: calc(33% - .5em);
+    }
+  }
+}
+@media (orientation: portrait) {
+  @media (min-width: 600px){
+    .btn-container {
+      justify-content: unset;
+      .btn {
+        max-width: 200px;
+        margin-right: 1em;
+      }
+    }
+    .date-wrapper {
+      justify-content: unset;
+      .date-title {
+        margin-right: 1em;
+      }
+    }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      .tech {
+        width: calc(50% - .5em);
+      }
+    }
+  }
+  @media (min-width: 950px) {
+    .btn-container {
+      .btn {
+        max-width: 250px;
+      }
+    }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      .tech {
+        width: calc(33% - .5em);
+      }
+    }
+  }
+}
+@media (orientation: landscape) {
+  .btn-container {
+    justify-content: unset;
+    .btn {
+      width: calc(33% - .75em);
+      max-width: 200px;
+      margin-right: 1em;
+    }
+  }
+  .devices {
+    width: 80%;
+    margin: 5em auto;
+    margin-bottom: 10em;
+  }
+  .date-wrapper {
+    justify-content: unset;
+    .date-title {
+      margin-right: 1em;
+    }
+  }
+  .tech-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 200px;
+    .tech {
+      width: calc(50% - .5em);
+    }
+  }
+  .gif {
+    .desktop {
+      width: 80%;
+      max-width: 80%;
+      display: block;
+      margin: auto;
+    }
+    .gif-wrapper {
+      width: 60%;
+      margin: 4em auto;
+    }
+  }
+  @media (min-width: 950px) {
+    /*** Summary Section ***/
+    .summary {
+      display: flex;
+      .info {
+        flex: 2;
+        margin: 0;
+        .desc {
+          margin: 0;
+          width: 80%;
+        }
+      }
+      .devices {
+        flex: 1;
+        margin: 0;
+        position: relative;
+        .tablet {
+          bottom: 1em;
+        }
+        .mobile {
+          bottom: -1em;
+        }
+      }
+    }
+    .btn-container {
+      .btn {
+        width: 9em;
+        margin-right: 2em;
+      }
+    }
+    /*** Detail Section ***/
+    .date-wrapper {
+      margin: 2em 0;
+    }
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      max-height: 150px;
+      .tech {
+        width: calc(33% - .5em);
+      }
+    }
+    /*** GIF Section ***/
+    .gif {
+      display: flex;
+      align-items: baseline;
+      margin: 2em 0;
+      .desktop {
+        width: 60%;
+        display: unset;
+        margin: unset;
+        margin-right: 2em;
+      }
+      .gif-wrapper {
+        width: 40%;
+        .tablet {
+          width: calc(66% - 1em);
+        }
+        .mobile {
+          width: calc(33% - 1em);
+        }
+      }
+    }
+  }
+  @media (min-width: 1000px) {
+    .summary .devices {
+      .tablet {
+        bottom: 5.5em;
+      }
+      .mobile {
+        bottom: 4.5em;
+      }
+    }
+    .gif {
+      margin: 0;
+    }
+  }
+  @media (min-width: 1100px) and (max-width: 1299px) {
+    .summary .devices {
+      .tablet {
+        bottom: 2.5em;
+      }
+      .mobile {
+        bottom: 1.5em;
+      }
+    }
+  }
+  @media (min-width: 1300px) {
+    .summary .devices {
+      .tablet {
+        bottom: -0.5em;
+      }
+      .mobile {
+        bottom: -1.5em;
       }
     }
   }
