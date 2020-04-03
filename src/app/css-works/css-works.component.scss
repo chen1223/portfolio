@@ -1,5 +1,5 @@
-@import '../../shared/color.scss';
-@import '../../shared/cloud.scss';
+@import '../shared/color.scss';
+@import '../shared/cloud.scss';
 :host {
   flex: 1;
 }
@@ -40,9 +40,11 @@ li {
     }
   }
 }
-
-
-
+@media (max-width: 400px) {
+  iframe[src*="codepen.io"] {
+    width: 320px !important;
+  }
+}
 @media (min-width: 768px) {
   .work-list {
     display: flex;
@@ -53,6 +55,4 @@ li {
       margin-bottom: 2em;
     }
   }
-}
-@media (orientation: portrait) {
 }
