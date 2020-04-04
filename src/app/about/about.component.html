@@ -1,0 +1,60 @@
+<div class="page-wrapper">
+  <div class="inner-page-wrapper">
+    <h1 class="page-title">About</h1>
+    <!-- Profile Picture section -->
+    <div class="profile-wrapper" #imgWrapper>
+      <figure class="skeleton"></figure>
+      <img (load)="imgLoadComplete(imgWrapper)" src="/assets/img/profile.jpg" alt="Bill Chen" class="profile">
+    </div><!-- End of profile picture section -->
+    <!-- Intro section -->
+    <summary class="intro">
+      <p>Hello! My name is <strong>Bill Chen</strong>. I am a <strong>web developer</strong> who is passionate about learning technologies of the web in all fields including <strong>Frontend</strong>, <strong>Backend</strong> and <strong>Infrastructure</strong>.</p>
+      <p>My current focus is at the Frontend and Infrastructure of the cloud, but I also like to pick up knowledges in other fields whenever I have the chance to as I believe learning is the key to success in this career. Happy learning!</p>
+    </summary><!-- End of intro section -->
+    <!-- Social Link Section -->
+    <ul class="social-links">
+      <!-- Github Link -->
+      <li class="social-item">
+        <a href="https://github.com/chen1223" target="_blank" class="link">
+          <fa-icon class="social-link__icon" [icon]="gitIcon"></fa-icon>
+        </a>
+      </li>
+      <!-- Codepen Link -->
+      <li class="social-item">
+        <a href="https://codepen.io/chen1223" target="_blank" class="link">
+          <fa-icon class="social-link__icon" [icon]="codepenIcon"></fa-icon>
+        </a>
+      </li>
+      <!-- LinkedIn Link -->
+      <li class="social-item">
+        <a href="https://www.linkedin.com/in/han-wei-chen/" target="_blank" class="link">
+          <fa-icon class="social-link__icon" [icon]="linkedInIcon"></fa-icon>
+        </a>
+      </li>
+    </ul><!-- End of social links -->
+    <!-- Skills Section -->
+    <section class="skill-container">
+      <h2 class="skill-title">Skills</h2>
+      <div class="skill-card closed" *ngFor="let skill of skills" #card>
+        <!-- Skill card header -->
+        <div class="skill-header">
+          <span class="skill-field"><strong>{{ skill.field }}</strong></span>
+          <div class="btn-group">
+            <button (click)="expand(card)" class="action --expand" type="button" aria-label="expand">
+              <fa-icon class="icon --expand" [icon]="plusIcon"></fa-icon>
+            </button>
+            <button (click)="collapse(card)" class="action --collapse" type="button" aria-label="collapse">
+              <fa-icon class="icon collapse" [icon]="minusIcon"></fa-icon>
+            </button>
+          </div>
+        </div><!-- End of skill card header -->
+        <div class="inner-card-wrapper">
+          <!-- Skill card body  -->
+          <ul class="skill-body">
+            <li class="skill" *ngFor="let tech of skill.technologies">{{ tech }}</li>
+          </ul><!-- End of skill card body -->
+        </div>
+      </div>
+    </section><!-- End of skill section -->
+  </div><!-- End of inner page wrapper -->
+</div><!-- End of page wrapper -->

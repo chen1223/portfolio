@@ -1,0 +1,153 @@
+@import '../shared/color.scss';
+@import '../shared/loading.scss';
+
+:host {
+  flex: 1;
+}
+strong {
+  font-weight: inherit;
+}
+.profile-wrapper {
+  min-height: 250px;
+  background: $imgLoadingBg;
+  position: relative;
+  overflow: hidden;
+  .profile {
+    width: 100%;
+    max-width: 100%;
+  }
+  &.img-loaded {
+    background: unset;
+    min-height: unset;
+    display: block;
+    .skeleton {
+      display: none;
+    }
+  }
+}
+/*** Summary Section ***/
+.intro {
+  font-weight: 500;
+  font-size: 1em;
+}
+.social-links {
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin: 2em 0;
+  .social-item {
+    font-size: 2em;
+    margin-right: 1.5em;
+    .social-link__icon {
+      color: #333;
+    }
+  }
+}
+/*** Skills Section ***/
+.skill-container {
+  margin-top: 3em;
+  overflow: hidden;
+}
+.skill-title {
+  color: $mainColorDark;
+  font-weight: bold;
+  font-size: 1.56em;
+  margin: .5em 0;
+}
+.skill-card {
+  position: relative;
+  min-height: 60px;
+  margin: .75em 0;
+  &.closed {
+    .action.--collapse {
+      display: none;
+    }
+    .inner-card-wrapper {
+      clip-path: circle(10% at 100% 0);
+      animation: collapse .5s .5s forwards;
+    }
+  }
+  &.opened {
+    .action.--expand {
+      display: none;
+    }
+    .inner-card-wrapper {
+      clip-path: circle(75%);
+    }
+  }
+}
+@keyframes collapse {
+  0% {
+    position: relative;
+  }
+  100% {
+    position: absolute;
+  }
+}
+.skill-header {
+  display: flex;
+  background: white;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+  padding: 1em;
+  padding-bottom: .5em;
+  z-index: 2;
+  .skill-field {
+    font-size: 1.125em;
+    font-weight: bold;
+    color: $mainColorDark;
+  }
+  .btn-group {
+    margin-left: auto;
+    .action {
+      outline: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      .icon {
+        color: $mainColorDark;
+        font-size: 1.5em;
+      }
+    }
+  }
+}
+.inner-card-wrapper {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5em 1em;
+  margin: 1.5em 0;
+  transition: all .5s ease-in-out;
+  overflow: hidden;
+  .skill-body {
+    position: relative;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    padding-top: 2em;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .skill {
+      padding-left: 1.1em;
+      position: relative;
+      width: 50%;
+      font-weight: 500;
+      &:before {
+        content: '';
+        margin-right: 0.5em;
+        color: #5F8CA8;
+        width: 8px;
+        height: 8px;
+        background: #5F8CA9;
+        border-radius: 50%;
+        position: absolute;
+        left: 0em;
+        top: 8px;
+      }
+    }
+  }
+}

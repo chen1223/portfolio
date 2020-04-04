@@ -21,6 +21,10 @@ const routes: Routes = [
       {
         path: 'css',
         loadChildren: () => import('../css-works/css-works.module').then(m => m.CssWorksModule)
+      },
+      {
+        path: 'about',
+        loadChildren: () => import('../about/about.module').then(m => m.AboutModule)
       }
     ]
   }

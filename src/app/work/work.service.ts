@@ -26,9 +26,11 @@ export class WorkService {
           return parse(txt).works;
         })
       ).subscribe(data => {
-        this.works = data;
+        this.works = data.works;
         this.loadComplete.next();
       });
+    } else {
+      this.loadComplete.next();
     }
   }
 

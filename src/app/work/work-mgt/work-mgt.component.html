@@ -5,13 +5,12 @@
       <li class="work" *ngFor="let work of works;let i = index">
         <a class="work-link"  [routerLink]="[work.id]" [attr.aria-label]="work.title">
           <div class="img-wrapper" #imgWrapper>
-            <figure class="cloud"></figure>
-            <figure class="cloud --bottom"></figure>
+            <figure class="skeleton"></figure>
             <img (load)="imgLoadComplete(imgWrapper)" [src]="work.preview" [alt]="work.title" class="preview">
           </div>
           <span class="work-title">{{ work.title }}</span>
         </a>
       </li>
-    </ul>
-  </div>
-</div>
+    </ul><!-- End of work list -->
+  </div><!-- End of inner page wrapper -->
+</div><!-- End of page wrapper -->

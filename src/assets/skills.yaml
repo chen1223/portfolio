@@ -1,0 +1,34 @@
+skills:
+  - field: Frontend
+    technologies:
+      - Angular
+      - TypeScript
+      - SCSS
+      - jQuery
+      - RxJs
+      - Jasmine
+      - Responsive Web Design
+      - Mobile First Design
+  - field: Backend
+    technologies:
+      - Laravel
+      - PHP
+      - Apache, Nginx
+      - MySQL, Postgres, MongoDB
+      - LAMP Architecture Design
+  - field: Cloud
+    technologies:
+      - EC2
+      - ECS
+      - S3
+      - RDS
+      - Route53
+      - Load Balancer
+      - Auto Scaling Group
+      - CloudFormation
+      - API Gateway
+  - field: DevOps
+    technologies:
+      - Git
+      - Docker
+      - Jenkins
