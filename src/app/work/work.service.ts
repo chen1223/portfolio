@@ -23,7 +23,7 @@ export class WorkService {
         responseType: 'text'
       }).pipe(
         map(txt => {
-          return parse(txt).works;
+          return parse(txt);
         })
       ).subscribe(data => {
         this.works = data.works;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { ActivatedRoute, Router, NavigationEnd, RouterOutlet } from '@angular/router';
+import { trigger, transition, query, style, animate, group, animateChild } from '@angular/animations';
 
 @Component({
   selector: 'app-container',
@@ -25,4 +26,5 @@ export class ContainerComponent implements OnInit {
   toggleMenu() {
     this.isActive = !this.isActive;
   }
+
 }

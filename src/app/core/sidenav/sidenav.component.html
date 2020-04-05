@@ -6,7 +6,8 @@
   <!-- Menu -->
   <ul class="menu-wrapper">
     <li class="item">
-      <a routerLink="/" routerLinkActive="active" class="link" aria-label="home" (click)="menuClick()">Home</a>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:
+        true}" class="link" aria-label="home" (click)="menuClick()">Home</a>
     </li>
     <li class="item">
       <a routerLink="/works" routerLinkActive="active" class="link" aria-label="my works" (click)="menuClick()">My Works</a>

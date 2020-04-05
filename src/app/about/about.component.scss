@@ -27,8 +27,15 @@ strong {
 }
 /*** Summary Section ***/
 .intro {
-  font-weight: 500;
   font-size: 1em;
+}
+.email-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 2em 0;
+  .email {
+    font-weight: 600;
+  }
 }
 .social-links {
   padding: 0;
@@ -57,76 +64,32 @@ strong {
 .skill-card {
   position: relative;
   min-height: 60px;
-  margin: .75em 0;
-  &.closed {
-    .action.--collapse {
-      display: none;
-    }
-    .inner-card-wrapper {
-      clip-path: circle(10% at 100% 0);
-      animation: collapse .5s .5s forwards;
-    }
-  }
-  &.opened {
-    .action.--expand {
-      display: none;
-    }
-    .inner-card-wrapper {
-      clip-path: circle(75%);
-    }
-  }
-}
-@keyframes collapse {
-  0% {
-    position: relative;
-  }
-  100% {
-    position: absolute;
-  }
+  margin: 1.5em 0;
+  display: flex;
 }
 .skill-header {
-  display: flex;
   background: white;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
   border-radius: 10px;
-  padding: 1em;
-  padding-bottom: .5em;
-  z-index: 2;
   .skill-field {
     font-size: 1.125em;
     font-weight: bold;
     color: $mainColorDark;
   }
-  .btn-group {
-    margin-left: auto;
-    .action {
-      outline: none;
-      background: none;
-      border: none;
-      cursor: pointer;
-      .icon {
-        color: $mainColorDark;
-        font-size: 1.5em;
-      }
-    }
-  }
 }
 .inner-card-wrapper {
   background: white;
   border-radius: 10px;
-  padding: 1.5em 1em;
-  margin: 1.5em 0;
+  padding: 1.5em;
   transition: all .5s ease-in-out;
   overflow: hidden;
+  width: 100%;
   .skill-body {
     position: relative;
     z-index: 1;
     margin: 0;
     padding: 0;
-    padding-top: 2em;
+    margin-top: 1em;
     list-style: none;
     display: flex;
     flex-wrap: wrap;
@@ -136,6 +99,7 @@ strong {
       position: relative;
       width: 50%;
       font-weight: 500;
+      margin-bottom: .5em;
       &:before {
         content: '';
         margin-right: 0.5em;
@@ -147,6 +111,95 @@ strong {
         position: absolute;
         left: 0em;
         top: 8px;
+      }
+    }
+  }
+}
+.note-section {
+  margin: 1em 0;
+  .note .source {
+    text-decoration: underline;
+  }
+}
+
+@media (orientation: portrait) {
+  @media (min-width: 300px) and (max-width: 599px) {
+    .inner-card-wrapper {
+      .skill-body {
+        .skill {
+          width: 100%;
+        }
+      }
+    }
+  }
+  @media (min-width: 600px) {
+    .profile-wrapper {
+      text-align: center;
+      .profile {
+        width: 60%;
+        max-width: 450px;
+      }
+    }
+    .email-wrapper {
+      display: block;
+      .email {
+        margin-left: 1em;
+      }
+    }
+  }
+}
+@media (orientation: landscape) {
+  .profile-wrapper {
+    text-align: center;
+    .profile {
+      width: 60%;
+      max-width: 450px;
+    }
+  }
+  @media (min-width: 600px) {
+    .email-wrapper {
+      display: block;
+      .email {
+        margin-left: 1em;
+      }
+    }
+  }
+  @media (min-width: 1000px) {
+    .hero-section {
+      display: flex;
+      justify-content: space-between;
+      .intro {
+        order: 1;
+        width: calc(66% - 1em);
+        p {
+          margin-top: 0;
+          max-width: 500px;
+          font-weight: 500;
+        }
+      }
+      .profile-wrapper {
+        order: 2;
+        width: calc(33% - 1em);
+        .profile {
+          width: 95%;
+          max-width: 95%;
+        }
+      }
+    }
+    .email-wrapper {
+      display: block;
+      margin-top: 0;
+      margin-bottom: 1em;
+      .email {
+        margin-left: 2em;
+      }
+    }
+    .skill-card-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .skill-card {
+        width: calc(50% - 1.5em);
       }
     }
   }

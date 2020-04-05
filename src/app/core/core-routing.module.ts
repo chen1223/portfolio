@@ -16,14 +16,17 @@ const routes: Routes = [
       },
       {
         path: 'works',
+        data: { page: 'works'},
         loadChildren: () => import('../work/work.module').then(m => m.WorkModule)
       },
       {
         path: 'css',
+        data: { page: 'css'},
         loadChildren: () => import('../css-works/css-works.module').then(m => m.CssWorksModule)
       },
       {
         path: 'about',
+        data: { page: 'about'},
         loadChildren: () => import('../about/about.module').then(m => m.AboutModule)
       }
     ]

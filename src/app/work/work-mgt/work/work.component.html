@@ -5,7 +5,7 @@
     <section class="summary">
       <!-- Info section -->
       <div class="info">
-        <p class="desc">{{ workData?.desc }}</p>
+        <p class="desc" @slideDown>{{ workData?.desc }}</p>
         <div class="btn-container">
           <a [href]="workData?.demoLink" target="blank" class="btn --main" aria-label="Live Demo">Live Demo</a>
           <a [href]="workData?.sourceLink" target="blank" class="btn --sub" aria-label="Source Link">Source Code</a>
@@ -36,14 +36,14 @@
     <!-- Detail section -->
     <section class="detail">
       <!-- Date section -->
-      <div class="date-wrapper">
+      <div class="date-wrapper" @slideDown>
         <span class="date-title">Date released:</span>
         <time class="date">{{ workData?.date }}</time>
       </div><!-- End of date section -->
       <!-- Technology section -->
       <div class="tech-container">
         <h2 class="tech-title">Technologies</h2>
-        <ul class="tech-list">
+        <ul class="tech-list" [@slideLeftList]="workData?.technologies.length">
           <li class="tech" *ngFor="let tech of workData?.technologies">
             <strong class="tech-text">{{ tech }}</strong>
           </li>

@@ -31,4 +31,4 @@ skills:
     technologies:
       - Git
       - Docker
-      - Jenkins
+      - Build automatic job pipeline with Jenkins
