@@ -50,7 +50,7 @@ works:
 
   - id: 3
     title: Animal Doctor
-    preview: https://drive.google.com/uc?id=1rombIjYYAAZSIIoG-yFitHGbmVHI546P
+    preview: https://drive.google.com/uc?id=1q0qGxQrAxIhefTqUzsYMEgRWrwCFYNKc
     desc:
       - Animal Doctor was the first website that I built based on someone else’s design. Looking back at my other works in my portfolio, I realized that most websites I build don’t look attractive due to the lack of good UI design. Even though designing a website is not a core skill of a Frontend developer, it is rather important to demonstrate that when a good design is given, he has the skills to deliver and bring the design to life. Thanks to Christina Vlastiuk, I had the chance to work on an astounding design.
     date: 2019-09
@@ -61,7 +61,7 @@ works:
       - SCSS
       - Responsive Web Design
     imgs:
-      desktop: https://drive.google.com/uc?id=1rombIjYYAAZSIIoG-yFitHGbmVHI546P
+      desktop: https://drive.google.com/uc?id=1q0qGxQrAxIhefTqUzsYMEgRWrwCFYNKc
       tablet: https://drive.google.com/uc?id=1BuYuiuLQPMzdhaxy71kib5rpHKGFn9NX
       mobile: https://drive.google.com/uc?id=1HcDYDN45KgaifJtak8OmeBOIcw-tWy4E
     gifs:
