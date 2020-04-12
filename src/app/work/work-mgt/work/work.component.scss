@@ -1,4 +1,7 @@
 @import '../../../shared/color.scss';
+:host {
+  margin: 0 auto;
+}
 .info {
   margin-bottom: 5em;
 }
@@ -19,6 +22,14 @@
     &.--sub {
       background: $subBtnColor;
     }
+  }
+}
+.summary {
+  align-items: flex-start;
+}
+.info {
+  .desc p {
+    margin-top: 0;
   }
 }
 /*** Devices Section ***/
@@ -174,9 +185,15 @@
     }
   }
   .devices {
-    width: 80%;
+    flex: 1;
     margin: 5em auto;
     margin-bottom: 10em;
+    .tablet {
+      bottom: -1em;
+    }
+    .mobile {
+      bottom: -2em;
+    }
   }
   .date-wrapper {
     justify-content: unset;
@@ -217,17 +234,17 @@
           width: 80%;
         }
       }
-      .devices {
-        flex: 1;
-        margin: 0;
-        position: relative;
-        .tablet {
-          bottom: 1em;
-        }
-        .mobile {
-          bottom: -1em;
-        }
-      }
+      // .devices {
+      //   flex: 1;
+      //   margin: 0;
+      //   position: relative;
+      //   .tablet {
+      //     bottom: 21em;
+      //   }
+      //   .mobile {
+      //     bottom: 20em;
+      //   }
+      // }
     }
     .btn-container {
       .btn {
@@ -271,36 +288,36 @@
     }
   }
   @media (min-width: 1000px) {
-    .summary .devices {
-      .tablet {
-        bottom: 5.5em;
-      }
-      .mobile {
-        bottom: 4.5em;
-      }
-    }
+    // .summary .devices {
+    //   .tablet {
+    //     bottom: 35em;
+    //   }
+    //   .mobile {
+    //     bottom: 34em;
+    //   }
+    // }
     .gif {
       margin: 0;
     }
   }
   @media (min-width: 1100px) and (max-width: 1299px) {
-    .summary .devices {
-      .tablet {
-        bottom: 2.5em;
-      }
-      .mobile {
-        bottom: 1.5em;
-      }
-    }
+    // .summary .devices {
+    //   .tablet {
+    //     bottom: 28em;
+    //   }
+    //   .mobile {
+    //     bottom: 27em;
+    //   }
+    // }
   }
   @media (min-width: 1300px) {
-    .summary .devices {
-      .tablet {
-        bottom: -0.5em;
-      }
-      .mobile {
-        bottom: -1.5em;
-      }
-    }
+    // .summary .devices {
+    //   .tablet {
+    //     bottom: -1em;
+    //   }
+    //   .mobile {
+    //     bottom: -2em;
+    //   }
+    // }
   }
 }

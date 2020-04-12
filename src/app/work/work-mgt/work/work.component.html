@@ -5,10 +5,12 @@
     <section class="summary">
       <!-- Info section -->
       <div class="info">
-        <p class="desc" @slideDown>{{ workData?.desc }}</p>
+        <div class="desc" @slideDown>
+          <p *ngFor="let desc of workData?.desc">{{desc}}</p>
+        </div>
         <div class="btn-container">
           <a [href]="workData?.demoLink" target="blank" class="btn --main" aria-label="Live Demo">Live Demo</a>
-          <a [href]="workData?.sourceLink" target="blank" class="btn --sub" aria-label="Source Link">Source Code</a>
+          <a *ngIf="workData?.sourceLink" [href]="workData?.sourceLink" target="blank" class="btn --sub" aria-label="Source Link">Source Code</a>
         </div>
       </div><!-- End of info section -->
       <!-- Devices section -->
