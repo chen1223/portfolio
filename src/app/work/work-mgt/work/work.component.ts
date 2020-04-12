@@ -48,6 +48,7 @@ export class WorkComponent implements OnInit {
               private workService: WorkService) { }
 
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     this.setUpRoute();
     this.regGsapAnimation();
   }
