@@ -5,6 +5,7 @@
 export const environment = {
   production: false
 };
+export const APP_DOMAIN = 'https://billchen.cloud';
 
 /*
  * For easier debugging in development mode, you can import the following file

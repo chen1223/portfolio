@@ -1,6 +1,11 @@
 import { CssService } from './css.service';
-import { Component, OnInit, Renderer2, ElementRef } from '@angular/core';
+import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
+import { Router } from '@angular/router';
+import { Title } from '@angular/platform-browser';
+import { MetaService } from '../shared/meta.service';
+import { isPlatformBrowser } from '@angular/common';
+import { APP_DOMAIN } from '../../environments/environment';
 
 @Component({
   selector: 'app-css-works',
@@ -23,11 +28,27 @@ import { trigger, transition, query, style, stagger, animate } from '@angular/an
 })
 export class CssWorksComponent implements OnInit {
   works = [];
+  isBrowser: boolean = false;
   constructor(private cssService: CssService,
-              private renderer: Renderer2) { }
+              private renderer: Renderer2,
+              private router: Router,
+              private titleService: Title,
+              private metaService: MetaService,
+              @Inject(PLATFORM_ID) private platformId) {
+                this.isBrowser = isPlatformBrowser(this.platformId);
+  }
 
   ngOnInit(): void {
     this.getWorks();
+    this.titleService.setTitle('CSS Works - Bill Chen');
+    this.addMetaTag();
+  }
+
+  addMetaTag(): void {
+    const title = 'CSS Works - Bill Chen';
+    const desc = 'CSS projects of Bill Chen on Codepen';
+    this.metaService.addPageMeta(title, desc);
+    this.metaService.addFBTag(title, desc, 'website', 'assets/img/profile.jpg', title, APP_DOMAIN + this.router.url);
   }
 
   getWorks(): void {
@@ -38,6 +59,8 @@ export class CssWorksComponent implements OnInit {
   }
 
   imgLoadComplete(wrapper: ElementRef) {
-    this.renderer.addClass(wrapper, 'img-loaded');
+    if (this.isBrowser) {
+      this.renderer.addClass(wrapper, 'img-loaded');
+    }
   }
 }
