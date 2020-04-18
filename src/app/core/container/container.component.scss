@@ -28,6 +28,10 @@
   background: $mainColor;
   min-height: 80px;
 }
+.header-logo {
+  width: 40%;
+  max-width: 40%;
+}
 .hamburger {
   outline: none;
   padding: .5em 0;
@@ -65,6 +69,12 @@
   }
 }
 @media (orientation: portrait) {
+  @media (min-width: 600px) {
+    .header-logo {
+      width: 30%;
+      max-width: 30%;
+    }
+  }
   @media (min-width: 1000px) {
     .layout {
       .sidenav {
@@ -81,6 +91,9 @@
 }
 
 @media (orientation: landscape) {
+  .header-logo {
+    display: none;
+  }
   @media (min-width: 650px) and (max-width: 999px) {
     .brand-name {
       display: none;

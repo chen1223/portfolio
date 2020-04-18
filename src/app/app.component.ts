@@ -1,6 +1,4 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { trigger, transition, query, style, animate } from '@angular/animations';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +6,4 @@ import { trigger, transition, query, style, animate } from '@angular/animations'
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'portfolio';
 }

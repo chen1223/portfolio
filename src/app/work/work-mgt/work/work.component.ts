@@ -1,10 +1,10 @@
+import { GaService } from './../../../shared/ga.service';
 import { WorkService } from './../../work.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import * as moment from 'moment';
 import { trigger, transition, style, animate, state, query, stagger } from '@angular/animations';
 import { gsap } from 'gsap';
-import { CSSRulePlugin } from 'gsap/CSSRulePlugin';
 import { Title } from '@angular/platform-browser';
 import { MetaService } from './../../../shared/meta.service';
 import { APP_DOMAIN } from '../../../../environments/environment';
@@ -54,6 +54,7 @@ export class WorkComponent implements OnInit {
               private workService: WorkService,
               private titleService: Title,
               private metaService: MetaService,
+              private gaService: GaService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -61,18 +62,17 @@ export class WorkComponent implements OnInit {
   ngOnInit(): void {
     if (this.isBrowser) {
       window.scrollTo(0, 0);
+      this.regGsapAnimation();
     }
-    this.titleService.setTitle('My Works - Bill Chen');
-    this.addMetaTag();
     this.setUpRoute();
-    this.regGsapAnimation();
   }
 
   addMetaTag(): void {
-    const title = 'My Works - Bill Chen';
-    const desc = 'Web projects of Bill Chen';
+    const title = `${this.workData.title} - Bill Chen`;
+    const desc = this.workData.desc[0];
+    const img = this.workData.imgs.desktop;
     this.metaService.addPageMeta(title, desc);
-    this.metaService.addFBTag(title, desc, 'website', 'assets/img/profile.jpg', title, APP_DOMAIN + this.router.url);
+    this.metaService.addFBTag(title, desc, 'website', img, title, APP_DOMAIN + this.router.url);
   }
 
   // Set up route
@@ -87,6 +87,11 @@ export class WorkComponent implements OnInit {
         .subscribe(data => {
           this.workData = data;
           this.workData.date = moment(this.workData.date, 'YYYY-MM').format('MMMM YYYY');
+          this.titleService.setTitle(`${this.workData.title} - Bill Chen`);
+          this.addMetaTag();
+          if (this.isBrowser) {
+            this.gaService.emitEvent('page', 'landing', this.workData.title);
+          }
         });
   }
 

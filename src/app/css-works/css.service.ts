@@ -1,3 +1,4 @@
+import { APP_DOMAIN } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { parse } from 'yamljs';
@@ -13,7 +14,7 @@ export class CssService {
 
   getWorks(): Observable<any> {
     return new Observable(observer => {
-      this.http.get('/assets/cssworks.yaml', {
+      this.http.get(`${APP_DOMAIN}/assets/cssworks.yaml`, {
         observe: 'body',
         responseType: 'text'
       }).pipe(map(txt => {

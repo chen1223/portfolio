@@ -25,10 +25,10 @@ export class MetaService {
   // Add FB related Meta tags
   addFBTag(ogTitle, ogDesc, ogType, ogImg, ogImgAlt, ogURL) {
     this.clearFBTag();
-    if(ogImg=='') {
-      ogImg = APP_DOMAIN + '/assets/img/profile.jpg';
+    if (ogImg === '') {
+      ogImg = APP_DOMAIN + '/assets/img/cover.jpeg';
     }
-    if(ogImgAlt=='') {
+    if (ogImgAlt === '') {
       ogImgAlt = 'Bill Chen';
     }
     this.meta.addTags([

@@ -1,3 +1,4 @@
+import { APP_DOMAIN } from './../../environments/environment';
 import { element } from 'protractor';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -18,7 +19,7 @@ export class WorkService {
 
   loadWorks(): void {
     if (this.works.length === 0) {
-      this.http.get('/assets/works.yaml', {
+      this.http.get(`${APP_DOMAIN}/assets/works.yaml`, {
         observe: 'body',
         responseType: 'text'
       }).pipe(

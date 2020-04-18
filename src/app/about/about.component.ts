@@ -1,3 +1,4 @@
+import { GaService } from './../shared/ga.service';
 import { AboutService } from './about.service';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -43,22 +44,27 @@ export class AboutComponent implements OnInit {
               private router: Router,
               private titleService: Title,
               private metaService: MetaService,
+              private gaService: GaService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   ngOnInit(): void {
+    if (this.isBrowser) {
+      this.regGsapAnimation();
+      this.gaService.emitEvent('page', 'landing', 'about');
+    }
     this.addMetaTag();
     this.titleService.setTitle('About Bill Chen');
-    this.regGsapAnimation();
     this.loadSkills();
   }
 
   addMetaTag(): void {
     const title = 'About Bill Chen';
+    // tslint:disable-next-line: max-line-length
     const desc = 'Bill Chen is a web developer who is passionate about learning technologies of the web in all fields including Frontend, Backend and Infrastructure.';
     this.metaService.addPageMeta(title, desc);
-    this.metaService.addFBTag(title, desc, 'website', 'assets/img/profile.jpg', title, APP_DOMAIN + this.router.url);
+    this.metaService.addFBTag(title, desc, 'website', '', title, APP_DOMAIN + this.router.url);
   }
 
   imgLoadComplete(wrapper: ElementRef) {

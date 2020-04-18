@@ -3,7 +3,7 @@
     <h1 class="page-title">My Works</h1>
     <ul class="work-list" [@workList]="works.length">
       <li class="work" *ngFor="let work of works;let i = index">
-        <a class="work-link"  [routerLink]="[work.id]" [attr.aria-label]="work.title">
+        <a class="work-link"  [routerLink]="[work.id]" [attr.aria-label]="work.title" (click)="onLinkClick(work)">
           <div class="img-wrapper" #imgWrapper>
             <figure class="skeleton"></figure>
             <img (load)="imgLoadComplete(imgWrapper)" [src]="work.preview" [alt]="work.title" class="preview">
