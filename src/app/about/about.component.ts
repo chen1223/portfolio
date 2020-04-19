@@ -1,9 +1,8 @@
-import { GaService } from './../shared/ga.service';
 import { AboutService } from './about.service';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { faGithub, faCodepen, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faPlusCircle, faMinusCircle } from '@fortawesome/free-solid-svg-icons';
-import { trigger, state, style, transition, animate, stagger, query, keyframes, animateChild } from '@angular/animations';
+import { trigger, state, style, transition, animate, stagger, query } from '@angular/animations';
 import { gsap } from 'gsap';
 import { Title } from '@angular/platform-browser';
 import { MetaService } from '../shared/meta.service';
@@ -44,7 +43,6 @@ export class AboutComponent implements OnInit {
               private router: Router,
               private titleService: Title,
               private metaService: MetaService,
-              private gaService: GaService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -52,7 +50,6 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
     if (this.isBrowser) {
       this.regGsapAnimation();
-      this.gaService.emitEvent('page', 'landing', 'about');
     }
     this.addMetaTag();
     this.titleService.setTitle('About Bill Chen');

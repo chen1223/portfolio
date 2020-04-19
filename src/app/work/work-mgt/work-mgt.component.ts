@@ -1,6 +1,5 @@
 import { MetaService } from './../../shared/meta.service';
 import { APP_DOMAIN } from './../../../environments/environment';
-import { GaService } from './../../shared/ga.service';
 import { WorkService } from './../work.service';
 import { Component, OnInit, ElementRef, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
@@ -36,15 +35,11 @@ export class WorkMgtComponent implements OnInit {
               private router: Router,
               private workService: WorkService,
               private metaService: MetaService,
-              private gaService: GaService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
 
   ngOnInit(): void {
-    if (this.isBrowser) {
-      this.gaService.emitEvent('page', 'landing', 'works');
-    }
     this.titleService.setTitle('My Works - Bill Chen');
     this.addMetaTag();
     this.getWorks();
@@ -68,8 +63,4 @@ export class WorkMgtComponent implements OnInit {
     this.renderer.addClass(wrapper, 'img-loaded');
   }
 
-  // On user click on link, send event to GA
-  onLinkClick(data): void {
-    this.gaService.emitEvent('link', 'click', data.title);
-  }
 }

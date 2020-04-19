@@ -1,4 +1,3 @@
-import { GaService } from './../../shared/ga.service';
 import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
 import { gsap } from 'gsap';
 import { Router } from '@angular/router';
@@ -17,7 +16,6 @@ export class HomeComponent implements OnInit {
   constructor(private router: Router,
               private titleService: Title,
               private metaService: MetaService,
-              private gaService: GaService,
               @Inject(PLATFORM_ID) private platformId) {
       this.isBrowser = isPlatformBrowser(this.platformId);
 }
@@ -25,7 +23,6 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
     if (this.isBrowser) {
       this.regGsapAnimation();
-      this.gaService.emitEvent('page', 'landing', 'home');
     }
     this.addMetaTag();
     this.titleService.setTitle('Bill Chen | Fullstack Developer');

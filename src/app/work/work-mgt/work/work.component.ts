@@ -1,4 +1,3 @@
-import { GaService } from './../../../shared/ga.service';
 import { WorkService } from './../../work.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
@@ -54,7 +53,6 @@ export class WorkComponent implements OnInit {
               private workService: WorkService,
               private titleService: Title,
               private metaService: MetaService,
-              private gaService: GaService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -89,9 +87,6 @@ export class WorkComponent implements OnInit {
           this.workData.date = moment(this.workData.date, 'YYYY-MM').format('MMMM YYYY');
           this.titleService.setTitle(`${this.workData.title} - Bill Chen`);
           this.addMetaTag();
-          if (this.isBrowser) {
-            this.gaService.emitEvent('page', 'landing', this.workData.title);
-          }
         });
   }
 
