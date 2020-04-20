@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd, RouterOutlet } from '@angular/router';
-import { trigger, transition, query, style, animate, group, animateChild } from '@angular/animations';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-container',
@@ -13,7 +12,9 @@ export class ContainerComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit(): void {
-    this.isHomePage = this.router.url === '/';
+    this.isHomePage = this.router.url.indexOf('work') < 0 &&
+                      this.router.url.indexOf('css') < 0 &&
+                      this.router.url.indexOf('about') < 0;
     this.registerRouteChange();
   }
 

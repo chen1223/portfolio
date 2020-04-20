@@ -55,4 +55,26 @@ li {
       margin-bottom: 2em;
     }
   }
+  .img-wrapper {
+    min-height: 200px;
+  }
+}
+@media (orientation: portrait) {
+  @media (min-width: 280px) and (max-width: 767px) {
+    .img-wrapper {
+      min-height: 200px;
+    }
+  }
+  @media (min-width: 1000px) {
+    .img-wrapper {
+      min-height: 250px;
+    }
+  }
+}
+@media (orientation: landscape) {
+  @media (min-width: 1000px) {
+    .img-wrapper {
+      min-height: 300px;
+    }
+  }
 }

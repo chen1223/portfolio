@@ -25,9 +25,19 @@ a {
   font-weight: 700;
 }
 @media (orientation: landscape) {
-  @media (min-width: 1000px) {
+  @media (min-width: 1000px) and (max-width: 1499px) {
     body {
       font-size: 18px;
+    }
+    .page-wrapper {
+      .inner-page-wrapper {
+        padding: 0 3em;
+      }
+    }
+  }
+  @media (min-width: 1500px){
+    body {
+      font-size: 20px;
     }
     .page-wrapper {
       .inner-page-wrapper {

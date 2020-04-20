@@ -10,6 +10,8 @@
 }
 .home-container {
   padding: 0 1.5em;
+  max-width: 1300px;
+  margin: auto;
   margin-top: 2em;
   height: 100%;
 }
@@ -267,7 +269,7 @@ a {
       font-size: 3.8em;
     }
   }
-  @media (min-width: 1300px) {
+  @media (min-width: 1300px) and (max-width: 1499px) {
     .title {
       font-size: 4em;
       margin-top: 1.7em;
@@ -277,6 +279,33 @@ a {
     }
     .desc {
       margin-top: 1.5em;
+    }
+    .cta-container {
+      margin-top: 3em;
+    }
+    .cta {
+      font-size: 1.6em;
+      font-weight: 600;
+    }
+    .decor {
+      &.--sql {
+        right: 2em;
+      }
+      &.--ecs {
+        right: 5em;
+      }
+    }
+  }
+  @media (min-width: 1500px) {
+    .title {
+      font-size: 4em;
+      width: 100%;
+      margin-top: 1.7em;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .desc {
+      margin-top: 2em;
     }
     .cta-container {
       margin-top: 3em;
