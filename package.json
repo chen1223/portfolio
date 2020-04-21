@@ -36,6 +36,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
     "@nguniversal/express-engine": "^9.0.2",
+    "@ngx-lite/json-ld": "^0.6.2",
     "express": "^4.15.2",
     "gsap": "^3.2.6",
     "hamburgers": "^1.1.3",

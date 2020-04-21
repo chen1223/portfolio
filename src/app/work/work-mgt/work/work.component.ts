@@ -1,3 +1,4 @@
+import { JsonldService } from './../../../shared/jsonld.service';
 import { WorkService } from './../../work.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
@@ -42,7 +43,8 @@ import { isPlatformBrowser } from '@angular/common';
   ]
 })
 export class WorkComponent implements OnInit {
-
+  // JSON LD schema
+  schema = {};
   workID;
   workData;
   isBrowser: boolean = false;
@@ -53,6 +55,7 @@ export class WorkComponent implements OnInit {
               private workService: WorkService,
               private titleService: Title,
               private metaService: MetaService,
+              private jsonldService: JsonldService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -87,6 +90,7 @@ export class WorkComponent implements OnInit {
           this.workData.date = moment(this.workData.date, 'YYYY-MM').format('MMMM YYYY');
           this.titleService.setTitle(`${this.workData.title} - Bill Chen`);
           this.addMetaTag();
+          this.addJsonLD();
         });
   }
 
@@ -101,5 +105,9 @@ export class WorkComponent implements OnInit {
       const tl = gsap.timeline({ defaults: { duration: 1} });
       tl.from('.btn-container', { opacity: 0, x: 100 }, '+=.5');
     }
+  }
+
+  addJsonLD(): void {
+    this.schema = this.jsonldService.getSingleWorkJSONLD(this.workData);
   }
 }

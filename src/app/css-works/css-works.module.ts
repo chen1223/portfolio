@@ -2,6 +2,7 @@ import { CssRoutingModule } from './css-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { CssWorksComponent } from './css-works.component';
+import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 
 
 
@@ -9,7 +10,8 @@ import { CssWorksComponent } from './css-works.component';
   declarations: [CssWorksComponent],
   imports: [
     CommonModule,
-    CssRoutingModule
+    CssRoutingModule,
+    NgxJsonLdModule
   ]
 })
 export class CssWorksModule { }

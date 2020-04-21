@@ -1,3 +1,4 @@
+import { JsonldService } from './../../shared/jsonld.service';
 import { MetaService } from './../../shared/meta.service';
 import { APP_DOMAIN } from './../../../environments/environment';
 import { WorkService } from './../work.service';
@@ -27,6 +28,8 @@ import { Router } from '@angular/router';
   ]
 })
 export class WorkMgtComponent implements OnInit {
+  // JSON LD schema
+  schema = {};
   works = [];
   isBrowser = false;
 
@@ -35,6 +38,7 @@ export class WorkMgtComponent implements OnInit {
               private router: Router,
               private workService: WorkService,
               private metaService: MetaService,
+              private jsonldService: JsonldService,
               @Inject(PLATFORM_ID) private platformId) {
     this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -56,6 +60,7 @@ export class WorkMgtComponent implements OnInit {
     this.workService.getAllWorks()
         .subscribe(data => {
           this.works = data;
+          this.addJsonLD();
         });
   }
 
@@ -63,4 +68,7 @@ export class WorkMgtComponent implements OnInit {
     this.renderer.addClass(wrapper, 'img-loaded');
   }
 
+  addJsonLD(): void {
+    this.schema = this.jsonldService.getWorkJSONLD(this.jsonldService.WEBSITE_WORK, this.works);
+  }
 }

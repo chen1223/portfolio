@@ -1,3 +1,4 @@
+import { JsonldService } from './../shared/jsonld.service';
 import { CssService } from './css.service';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
@@ -27,6 +28,8 @@ import { APP_DOMAIN } from '../../environments/environment';
   ]
 })
 export class CssWorksComponent implements OnInit {
+  // JSON LD schema
+  schema = {};
   works = [];
   isBrowser: boolean = false;
   constructor(private cssService: CssService,
@@ -34,6 +37,7 @@ export class CssWorksComponent implements OnInit {
               private router: Router,
               private titleService: Title,
               private metaService: MetaService,
+              private jsonldService: JsonldService,
               @Inject(PLATFORM_ID) private platformId) {
                 this.isBrowser = isPlatformBrowser(this.platformId);
   }
@@ -55,6 +59,7 @@ export class CssWorksComponent implements OnInit {
     this.cssService.getWorks()
         .subscribe(res => {
           this.works = res;
+          this.addJsonLD();
         });
   }
 
@@ -62,5 +67,9 @@ export class CssWorksComponent implements OnInit {
     if (this.isBrowser) {
       this.renderer.addClass(wrapper, 'img-loaded');
     }
+  }
+
+  addJsonLD(): void {
+    this.schema = this.jsonldService.getWorkJSONLD(this.jsonldService.CSS_WORK, this.works);
   }
 }

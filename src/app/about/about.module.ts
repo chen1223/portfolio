@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { AboutRoutingModule } from './about-routing.module';
 import { AboutComponent } from './about.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 
 
 
@@ -14,7 +15,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
   imports: [
     CommonModule,
     AboutRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgxJsonLdModule
   ]
 })
 export class AboutModule {

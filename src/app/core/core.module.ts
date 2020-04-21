@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { ContainerComponent } from './container/container.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { HomeComponent } from './home/home.component';
+import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 
 
 
@@ -16,7 +17,8 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     CommonModule,
-    CoreRoutingModule
+    CoreRoutingModule,
+    NgxJsonLdModule
   ]
 })
 export class CoreModule { }
