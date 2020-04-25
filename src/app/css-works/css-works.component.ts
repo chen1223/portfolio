@@ -1,3 +1,4 @@
+import { ASSET_PREFIX } from './../../environments/environment.prod';
 import { JsonldService } from './../shared/jsonld.service';
 import { CssService } from './css.service';
 import { Component, OnInit, Renderer2, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
@@ -28,6 +29,7 @@ import { APP_DOMAIN } from '../../environments/environment';
   ]
 })
 export class CssWorksComponent implements OnInit {
+  assetPrefix = ASSET_PREFIX;
   // JSON LD schema
   schema = {};
   works = [];

@@ -1,6 +1,6 @@
 import { JsonldService } from './../../shared/jsonld.service';
 import { MetaService } from './../../shared/meta.service';
-import { APP_DOMAIN } from './../../../environments/environment';
+import { APP_DOMAIN, ASSET_PREFIX } from './../../../environments/environment';
 import { WorkService } from './../work.service';
 import { Component, OnInit, ElementRef, Renderer2, Inject, PLATFORM_ID } from '@angular/core';
 import { trigger, transition, query, style, stagger, animate } from '@angular/animations';
@@ -28,6 +28,7 @@ import { Router } from '@angular/router';
   ]
 })
 export class WorkMgtComponent implements OnInit {
+  assetPrefix = ASSET_PREFIX;
   // JSON LD schema
   schema = {};
   works = [];

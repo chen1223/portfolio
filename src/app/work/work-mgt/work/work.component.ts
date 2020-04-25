@@ -1,3 +1,4 @@
+import { ASSET_PREFIX } from './../../../../environments/environment';
 import { JsonldService } from './../../../shared/jsonld.service';
 import { WorkService } from './../../work.service';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -43,6 +44,7 @@ import { isPlatformBrowser } from '@angular/common';
   ]
 })
 export class WorkComponent implements OnInit {
+  assetPrefix = ASSET_PREFIX;
   // JSON LD schema
   schema = {};
   workID;

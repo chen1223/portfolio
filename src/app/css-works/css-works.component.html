@@ -7,7 +7,7 @@
         <a class="work-link" [href]="work.demoLink" [attr.aria-label]="work.title" target="_blank">
           <div class="img-wrapper" #imgWrapper>
             <figure class="skeleton"></figure>
-            <img (load)="imgLoadComplete(imgWrapper)" [src]="work.preview" [alt]="work.title" class="preview">
+            <img (load)="imgLoadComplete(imgWrapper)" [src]="assetPrefix + '/' + work.preview" [alt]="work.title" class="preview">
           </div>
           <span class="work-title">{{ work.title }}</span>
         </a>

@@ -1,5 +1,4 @@
 import { APP_DOMAIN } from './../../environments/environment';
-import { element } from 'protractor';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { parse } from 'yamljs';

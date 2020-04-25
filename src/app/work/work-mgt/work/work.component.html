@@ -17,19 +17,19 @@
       <!-- Devices section -->
       <div class="devices">
         <img *ngIf="workData?.imgs.desktop"
-            [src]="workData?.imgs.desktop"
+            [src]="assetPrefix + '/' + workData?.imgs.desktop"
             [alt]="workData?.title"
             class="desktop"
             #desktopImg
             (load)="imgLoadComplete(desktopImg)">
         <img *ngIf="workData?.imgs.tablet"
-             [src]="workData?.imgs.tablet"
+             [src]="assetPrefix + '/' + workData?.imgs.tablet"
              [alt]="workData?.title"
              class="tablet"
              #tabletImg
              (load)="imgLoadComplete(tabletImg)">
         <img *ngIf="workData?.imgs.mobile"
-             [src]="workData?.imgs.mobile"
+             [src]="assetPrefix + '/' + workData?.imgs.mobile"
              [alt]="workData?.title"
              class="mobile"
              #mobileImg
@@ -56,20 +56,20 @@
     <!-- GIF Section -->
     <section class="gif">
       <img *ngIf="workData?.gifs.desktop"
-           [src]="workData?.gifs.desktop"
+           [src]="assetPrefix + '/' + workData?.gifs.desktop"
            [alt]="workData?.title"
            class="desktop"
            #desktopGif
            (load)="imgLoadComplete(desktopGif)">
       <div class="gif-wrapper">
         <img *ngIf="workData?.gifs.tablet"
-             [src]="workData?.gifs.tablet"
+             [src]="assetPrefix + '/' + workData?.gifs.tablet"
              [alt]="workData?.title"
              class="tablet"
              #tabletGif
              (load)="imgLoadComplete(tabletGif)">
         <img *ngIf="workData?.gifs.mobile"
-             [src]="workData?.gifs.mobile"
+             [src]="assetPrefix + '/' + workData?.gifs.mobile"
              [alt]="workData?.title"
              class="mobile"
              #mobileGif

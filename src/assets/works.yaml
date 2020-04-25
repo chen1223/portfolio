@@ -1,7 +1,7 @@
 works:
   - id: 1
     title: UI Design Demonstrations
-    preview: https://drive.google.com/uc?id=13l1M1y_NYWttZlFXOYL0_Q_FydG8H2cO
+    preview: design-demo/design-demo-l.png
     desc:
       - In a web design, the UI design fundamentals are very important as they can not only help create good user experience, but more importantly, can lead users’ attentions to the elements you’d like them to focus on.
       - 'As a Frontend developer, web design has always been my weakness. I may have the ability to create good websites, but without good design, they will never become great websites. In order to overcome this weakness, I started to follow youtubers that periodically share UI design best practices, and also took Joe Natoli’s design class on Udemy (DESIGN RULES: Principles + Practices for Great UI Design). This website was built after I finished all his lectures. I picked out some common rules to demonstrate on this project not only to practice the rules, but also hope that this website can help someone else in the future who faces the same challenges as I did.'
@@ -15,17 +15,17 @@ works:
       - UI Design Rules
       - Adobe XD
     imgs:
-      desktop: https://drive.google.com/uc?id=13l1M1y_NYWttZlFXOYL0_Q_FydG8H2cO
-      tablet: https://drive.google.com/uc?id=1j7QdlWKaU6_r-TvH0xUpb1jirP4srUAg
-      mobile: https://drive.google.com/uc?id=1jZLbkjFtoi7S5VS0D_Gm4Py9dCbsHUAA
+      desktop: design-demo/design-demo-l.png
+      tablet: design-demo/design-demo-m.png
+      mobile: design-demo/design-demo-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1RVwfYQ61bSSnCSGpSJNnnMonjfuTmU5j
-      tablet: https://drive.google.com/uc?id=1ESZKeCuJqIzLEUrJ0lg_YuBQoShAytsg
-      mobile: https://drive.google.com/uc?id=1_iX8Gk-8-PG71Q5gQHKnklhMBqBBNlDI
+      desktop: design-demo/design-demo-l.gif
+      tablet: design-demo/design-demo-m.gif
+      mobile: design-demo/design-demo-s.gif
 
   - id: 2
     title: Backstage Admin Panel
-    preview: https://drive.google.com/uc?id=1JiS3Hcwtk9IHiJ8bSZrgBqILEJ8LxrGc
+    preview: backstage-panel/backstage-panel-l.png
     desc:
       - Backstage Admin Panel is an admin dashboard website for the Film Portfolio website which I built for my brother back in April 2019. After the website was released, my brother can now update his works in his portfolio website through the admin console. This project involves the entire full stack development from database design, Backend logics and finally to Frontend presentation. Apart from the Frontend technologies, Laravel and Postgres were used for the Backend.
     date: 2020-02
@@ -40,17 +40,17 @@ works:
       - Postgres
       - Adobe XD
     imgs:
-      desktop: https://drive.google.com/uc?id=1JiS3Hcwtk9IHiJ8bSZrgBqILEJ8LxrGc
-      tablet: https://drive.google.com/uc?id=11SZtp3JAg2rrd0Og9x7SdLXF0w4If_ci
-      mobile: https://drive.google.com/uc?id=1twt-Nz5tLTzoxM6iDKuhEXol-DtEhjd0
+      desktop: backstage-panel/backstage-panel-l.png
+      tablet: backstage-panel/backstage-panel-m.png
+      mobile: backstage-panel/backstage-panel-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1FYNfWHz5aUEXeB31Rz1hbV3HwI4-zF9Q
-      tablet: https://drive.google.com/uc?id=1lup5ebDk4FMLZZgyjJxUiW9o56PSf7XU
-      mobile: https://drive.google.com/uc?id=17jxMsoXpqyxTZ4Kh11MxUS03mKMxSnXT
+      desktop: backstage-panel/backstage-panel-l.gif
+      tablet: backstage-panel/backstage-admin-m.gif
+      mobile: backstage-panel/backstage-panel-s.gif
 
   - id: 3
     title: Animal Doctor
-    preview: https://drive.google.com/uc?id=1q0qGxQrAxIhefTqUzsYMEgRWrwCFYNKc
+    preview: animal-doctor/animal-doctor-l.png
     desc:
       - Animal Doctor was the first website that I built based on someone else’s design. Looking back at my other works in my portfolio, I realized that most websites I build don’t look attractive due to the lack of good UI design. Even though designing a website is not a core skill of a Frontend developer, it is rather important to demonstrate that when a good design is given, he has the skills to deliver and bring the design to life. Thanks to Christina Vlastiuk, I had the chance to work on an astounding design.
     date: 2019-09
@@ -61,17 +61,17 @@ works:
       - SCSS
       - Responsive Web Design
     imgs:
-      desktop: https://drive.google.com/uc?id=1q0qGxQrAxIhefTqUzsYMEgRWrwCFYNKc
-      tablet: https://drive.google.com/uc?id=1BuYuiuLQPMzdhaxy71kib5rpHKGFn9NX
-      mobile: https://drive.google.com/uc?id=1HcDYDN45KgaifJtak8OmeBOIcw-tWy4E
+      desktop: animal-doctor/animal-doctor-l.png
+      tablet: animal-doctor/animal-doctor-m.png
+      mobile: animal-doctor/animal-doctor-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1ro3ni27y1TlZr5K6QWcVUxrMp1IylxB_
-      tablet: https://drive.google.com/uc?id=1l6DAA8qJu25XoaTxXZbOjDWmC6_A-9xq
-      mobile: https://drive.google.com/uc?id=17qjceyHczb3GZVyk4HBZcDDRkrw2qIil
+      desktop: animal-doctor/animal-doctor-l.gif
+      tablet: animal-doctor/animal-doctor-m.gif
+      mobile: animal-doctor/animal-doctor-s.gif
 
   - id: 4
     title: Animal Adoption
-    preview: https://drive.google.com/uc?id=1ikPLYuhvfnFNuK_gjjNDYeFcx2lJHIPK
+    preview: animal-adoption/animal-adoption-l.png
     desc:
       - In Taiwan, many public APIs are provided by the government. They consist of real data and are free to use. The purpose of this website is to use the public animal API, which lists all animals in all shelter houses across Taiwan, and build a platform that can make the process of adopting animals easier.
     date: 2019-08
@@ -83,17 +83,17 @@ works:
       - SCSS
       - Responsive Web Design
     imgs:
-      desktop: https://drive.google.com/uc?id=1ikPLYuhvfnFNuK_gjjNDYeFcx2lJHIPK
-      tablet: https://drive.google.com/uc?id=1JoPfOw8VR0YiADItzpoprVTYdlV630uo
-      mobile: https://drive.google.com/uc?id=1CFt5ggp9SbDJB3OFVJAEQsu6-ZLI-y6f
+      desktop: animal-adoption/animal-adoption-l.png
+      tablet: animal-adoption/animal-adoption-m.png
+      mobile: animal-adoption/animal-adoption-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1Z5UU9XY9lz7zTlVZzS7a-DWo8UVDeco6
-      tablet: https://drive.google.com/uc?id=1is8E8h9bDoksOoO_-cQi0D289SoMNS4_
-      mobile: https://drive.google.com/uc?id=1rYltTKZrNUmAXpVJBXScPVeW5qQHYsB-
+      desktop: animal-adoption/animal-adoption-l.gif
+      tablet: animal-adoption/animal-adoption-m.gif
+      mobile: animal-adoption/animal-adoption-s.gif
 
   - id: 5
     title: Film Portfolio
-    preview: https://drive.google.com/uc?id=1ltPjwC_5oEA0ytXB4q-5X1zOAWLMxujl
+    preview: film-portfolio/film-portfolio-l.png
     desc:
       - My brother studies film and as a filmmaker, he needs a place to showcase his works hence this website. The film portfolio website was built in March 2019 as a static website that does not connect to Backend for any data. All data was stored in JSON format directly in the Frontend. The website was later renovated in February 2020 with the Backstage Admin Panel project, so that it will get data from the Backend. Furthermore, an article section was added to the website, so my brother can share some fun behind the scene stories with his audiences.
     date: 2019-03
@@ -109,17 +109,17 @@ works:
       - Digital Ocean Droplet
       - Ubuntu 18.04 server
     imgs:
-      desktop: https://drive.google.com/uc?id=1ltPjwC_5oEA0ytXB4q-5X1zOAWLMxujl
-      tablet: https://drive.google.com/uc?id=1faymAZaBIxY7kjI-hpDeZ51Bd39HyRhS
-      mobile: https://drive.google.com/uc?id=1coRv95NZFf5CksvMhZL0Y2hCfWgsq0Bu
+      desktop: film-portfolio/film-portfolio-l.png
+      tablet: film-portfolio/film-portfolio-m.png
+      mobile: film-portfolio/film-portfolio-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1RaB0qJvKpm8h5GTmfqNIoCpS-1Ndmn16
-      tablet: https://drive.google.com/uc?id=11Y0zq66IHlLVZKUTRI1aL4aiVsi-m8NR
-      mobile: https://drive.google.com/uc?id=1OQSMYh9_ZQ_L9KoszzZ3ZIXox1MY9p0g
+      desktop: film-portfolio/film-portfolio-l.gif
+      tablet: film-portfolio/film-portfolio-m.gif
+      mobile: film-portfolio/film-portfolio-s.gif
 
   - id: 6
     title: Cooking Diary
-    preview: https://drive.google.com/uc?id=1SuKD9jNBykKHSBrC7OhvU87-6JbKQW98
+    preview: cooking-diary/cooking-diary-l.png
     desc:
       - Starting from college, I like to cook in my free time, but always lack a place to store my recipes. In order to solve this issue I built the Cooking Diary website from scratch including database design, Backend APIs, and a SPA based Frontend. It was also my first comprehensive Angular project after I took an Angular class on Udemy.
     date: 2019-01
@@ -137,17 +137,17 @@ works:
       - Digital Ocean Droplet
       - Ubuntu 18.04 server
     imgs:
-      desktop: https://drive.google.com/uc?id=1SuKD9jNBykKHSBrC7OhvU87-6JbKQW98
-      tablet: https://drive.google.com/uc?id=1ld9My_y6BshZGNJZqLtGjiso4XAEtcz6
-      mobile: https://drive.google.com/uc?id=1gU1Tu3r3y1Z2FYnNZa7_6OgPuzUUMqKj
+      desktop: cooking-diary/cooking-diary-l.png
+      tablet: cooking-diary/cooking-diary-m.png
+      mobile: cooking-diary/cooking-diary-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1X6-N9g5cozEBzbvw_xfu9BzC8uFgfy9B
-      tablet: https://drive.google.com/uc?id=16ryIpYONpGCIwt-aapFy0Y2jM8SLEt9H
-      mobile: https://drive.google.com/uc?id=10hkkx9ZPF7WR0rmERwVv7o3RmrNPzSb3
+      desktop: cooking-diary/cooking-diary-l.gif
+      tablet: cooking-diary/cooking-diary-m.gif
+      mobile: cooking-diary/cooking-diary-s.gif
 
   - id: 7
     title: Simple Gallery
-    preview: https://drive.google.com/uc?id=1cQ4tVh9Popt610bqUfnV4RTNM4GB3YeH
+    preview: cooking-diary/cooking-diary-l.png
     desc:
       - The very first Single Page Application (SPA) I built using Angular 5. It is also my first learning project to learn all the basic concepts of Angular.
     date: 2018-02
@@ -159,17 +159,17 @@ works:
       - Responsive Web Design
       - Bootstrap
     imgs:
-      desktop: https://drive.google.com/uc?id=1cQ4tVh9Popt610bqUfnV4RTNM4GB3YeH
-      tablet: https://drive.google.com/uc?id=11PG3Q0TE9jwQc32K6ZlnDk3u8PEMXfHb
-      mobile: https://drive.google.com/uc?id=1OyIBlqu7a_kCgaSCyqzsoO9DFYKlNjMe
+      desktop: cooking-diary/cooking-diary-l.png
+      tablet: simple-gallery/simple-gallery-m.png
+      mobile: simple-gallery/simple-gallery-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=1iukpo7X_og1lO2JgMlMgBx74j67eqtBD
-      tablet: https://drive.google.com/uc?id=1tu9td_FZLN4MzQd80w_PmIS09eJgQEte
-      mobile: https://drive.google.com/uc?id=16ZpsYcXZTs7dQTIW-IztvwA1-KNYEAd-
+      desktop: simple-gallery/simple-gallery-l.gif
+      tablet: simple-gallery/simple-gallery-m.gif
+      mobile: simple-gallery/simple-gallery-s.gif
 
   - id: 8
     title: BonBonMusic
-    preview: https://drive.google.com/uc?id=1SeYefuCmAGWnSVh98VpGQiQPwHAdwiBh
+    preview: bonbon-music/bonbon-music-l.png
     desc:
       - During my time in the startup industry, I had the chance to work as a core team member of a startup team - BonBonMusic. BonBonMusic focuses on helping students match their ideal music teachers by providing a platform where music teachers can put out their courses online and students can leave comments and ratings to the teachers they have taken classes with. As a Frontend developer, my job was to renovate the official website, so that it not only looks better, but also fully responsive to all devices.
     date: 2017-12
@@ -181,17 +181,17 @@ works:
       - jQuery
       - Responsive Web Design
     imgs:
-      desktop: https://drive.google.com/uc?id=1SeYefuCmAGWnSVh98VpGQiQPwHAdwiBh
-      tablet: https://drive.google.com/uc?id=1rToUl71Zpc602JC1GtuxSvGlOUlGjrGB
-      mobile: https://drive.google.com/uc?id=1GnplD9dVzbzqZCVbSYmITSv0oRC035Lu
+      desktop: bonbon-music/bonbon-music-l.png
+      tablet: bonbon-music/bonbon-music-m.png
+      mobile: bonbon-music/bonbon-music-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=151zh795PV2cl5Lg2hsH9xz71FOF0qbOT
-      tablet: https://drive.google.com/uc?id=12P75B2ME8NoC87d5X9-pi--eEn9fjcxt
-      mobile: https://drive.google.com/uc?id=1fBGRTEfZeyBDVbr79OorWswAPbhCXeKy
+      desktop: bonbon-music/bonbon-music-l.gif
+      tablet: bonbon-music/bonbon-music-m.gif
+      mobile: bonbon-music/bonbon-music-s.gif
 
   - id: 9
     title: Business Casual
-    preview: https://drive.google.com/uc?id=1vZk2-G-LA-BtSGQ2Tt-eECxCBrV6X-Q7
+    preview: business-casual/business-casual-l.png
     desc:
       - A very simple business website template built with Bootstrap.
     date: 2016-12
@@ -203,17 +203,17 @@ works:
       - Boostrap
       - Responsive Web Design
     imgs:
-      desktop: https://drive.google.com/uc?id=1vZk2-G-LA-BtSGQ2Tt-eECxCBrV6X-Q7
-      tablet: https://drive.google.com/uc?id=1yVw-3bkQJT3L72d0ojJGtVW2p29S2yKs
-      mobile: https://drive.google.com/uc?id=1YL-a_8Oba0yTWJcCB74e6IWRzCdNphFS
+      desktop: business-casual/business-casual-l.png
+      tablet: business-casual/business-casual-m.png
+      mobile: business-casual/business-casual-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=12R1bxLZOogBx0AVs1_9cPNaM1gXp1Zyj
-      tablet: https://drive.google.com/uc?id=1lgJUUfeTxAzW7d4uAHCSa-4EdluxysNU
-      mobile: https://drive.google.com/uc?id=1Rx3gV36Yvs4IAWkW2gkZsYw3wKmedAZk
+      desktop: business-casual/business-casual-l.gif
+      tablet: business-casual/business-casual-m.gif
+      mobile: business-casual/business-casual-s.gif
 
   - id: 10
     title: Art Gallery
-    preview: https://drive.google.com/uc?id=1w7Eb3BVGUVwqHW-wYBTBkqTZMv2S4e4s
+    preview: art-gallery/art-gallery-l.png
     desc:
       - Interactive flat UI design website built for art majors to showcase their works. This website was also my first side project website. The website is built with Vanilla Javascript, CSS, and Bootstrap.
     date: 2016-11
@@ -226,10 +226,10 @@ works:
       - Responsive Web Design
       - Flat UI Design
     imgs:
-      desktop: https://drive.google.com/uc?id=1w7Eb3BVGUVwqHW-wYBTBkqTZMv2S4e4s
-      tablet: https://drive.google.com/uc?id=1U86e5Bf9yFLZK2uaFFXwO-qBO2oXXJ-s
-      mobile: https://drive.google.com/uc?id=1M2NdXTJS7D0mnLM6EHL4bUFGXzdZ0mVf
+      desktop: art-gallery/art-gallery-l.png
+      tablet: art-gallery/art-gallery-m.png
+      mobile: art-gallery/art-gallery-s.png
     gifs:
-      desktop: https://drive.google.com/uc?id=17L0rbRWL9mxnpFQrLskTdTFs3gVP3yVw
-      tablet: https://drive.google.com/uc?id=1ZrPMZj7wKux6dMj-odru3fykqO8zdx99
-      mobile: https://drive.google.com/uc?id=1QVH4Nn_bKeEjuw8RPdaJscTW1kiJ7mO1
+      desktop: art-gallery/art-gallery-l.gif
+      tablet: art-gallery/art-gallery-m.gif
+      mobile: art-gallery/art-gallery-s.gif
