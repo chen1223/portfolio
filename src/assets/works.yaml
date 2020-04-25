@@ -147,7 +147,7 @@ works:
 
   - id: 7
     title: Simple Gallery
-    preview: cooking-diary/cooking-diary-l.png
+    preview: simple-gallery/simple-gallery-l.png
     desc:
       - The very first Single Page Application (SPA) I built using Angular 5. It is also my first learning project to learn all the basic concepts of Angular.
     date: 2018-02
@@ -159,7 +159,7 @@ works:
       - Responsive Web Design
       - Bootstrap
     imgs:
-      desktop: cooking-diary/cooking-diary-l.png
+      desktop: simple-gallery/simple-gallery-l.png
       tablet: simple-gallery/simple-gallery-m.png
       mobile: simple-gallery/simple-gallery-s.png
     gifs:
