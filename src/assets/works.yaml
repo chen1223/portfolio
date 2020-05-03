@@ -1,4 +1,26 @@
 works:
+  - id: 11
+    title: Perfume
+    preview: perfume/perfume-l.png
+    desc:
+      - The Perfume website was inspired by youtuber Gary Simon’s videos and the motivation was to create an easy yet modern website with the broken layout approach. It was the first modern website that I had chances to work on from the designing phase to the actual Frontend implementation. With this knowledge and experience at hand, I will be able to create more websites with astounding design that meets business standards.
+    date: 2020-05
+    demoLink: https://chen1223.github.io/perfume-landing-page/
+    sourceLink: https://github.com/chen1223/perfume-landing-page
+    technologies:
+      - Angular 9
+      - SCSS
+      - Responsive Web Design
+      - Broken Layout Design
+      - Adobe XD
+    imgs:
+      desktop: perfume/perfume-l.png
+      tablet: perfume/perfume-m.png
+      mobile: perfume/perfume-s.png
+    gifs:
+      desktop: perfume/perfume-l.gif
+      mobile: perfume/perfume-m.gif
+      tablet: perfume/perfume-s.gif
   - id: 1
     title: UI Design Demonstrations
     preview: design-demo/design-demo-l.png
@@ -52,7 +74,7 @@ works:
     title: Animal Doctor
     preview: animal-doctor/animal-doctor-l.png
     desc:
-      - Animal Doctor was the first website that I built based on someone else’s design. Looking back at my other works in my portfolio, I realized that most websites I build don’t look attractive due to the lack of good UI design. Even though designing a website is not a core skill of a Frontend developer, it is rather important to demonstrate that when a good design is given, he has the skills to deliver and bring the design to life. Thanks to Christina Vlastiuk, I had the chance to work on an astounding design.
+      - Animal Doctor was the first website that I built based on someone else’s design. Looking back at my other works in my portfolio, I realized that most websites I build don’t look attractive due to the lack of good UI design. Even though designing a website is not a core skill of a Frontend developer, it is rather important to demonstrate that when a good design is given that I, as a Frontend developer, have the skills to deliver and bring the design to life. Thanks to Christina Vlastiuk, I had the chance to work on an astounding design.
     date: 2019-09
     demoLink: https://chen1223.github.io/landing-page-animal-doctor/
     sourceLink: https://github.com/chen1223/landing-page-animal-doctor

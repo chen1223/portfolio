@@ -6,7 +6,7 @@ export const environment = {
   production: false
 };
 export const APP_DOMAIN = 'http://localhost:4200';
-export const ASSET_PREFIX = 'https://billchen-cloud.s3-us-west-1.amazonaws.com';
+export const ASSET_PREFIX = 'https://d2ox951o58t8ku.cloudfront.net';
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
