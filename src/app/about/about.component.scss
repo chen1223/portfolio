@@ -28,13 +28,19 @@ strong {
 /*** Summary Section ***/
 .intro {
   font-size: 1em;
+  color: #554d4d;
 }
 .email-wrapper {
   display: flex;
   justify-content: space-between;
   margin: 2em 0;
+  .contact {
+    font-weight: 500;
+    color: #333;
+  }
   .email {
     font-weight: 600;
+    color: #333;
   }
 }
 .social-links {
@@ -100,6 +106,7 @@ strong {
       width: 50%;
       font-weight: 500;
       margin-bottom: .5em;
+      color: #333;
       &:before {
         content: '';
         margin-right: 0.5em;
@@ -119,6 +126,7 @@ strong {
   margin: 1em 0;
   .note .source {
     text-decoration: underline;
+    color: #333;
   }
 }
 
