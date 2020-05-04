@@ -49,6 +49,25 @@ a {
   max-width: 360px;
   position: relative;
   z-index: 5;
+  cursor: pointer;
+  transition: all .3s;
+  &:hover {
+    opacity: .5 !important;
+    transform: translateX(20px) !important;
+  }
+  &.leave {
+    animation: leave .5s forwards !important;
+  }
+}
+@keyframes leave {
+  from {
+    opacity: 0.5;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(100px);
+  }
 }
 /*** Decorations ***/
 .devices {

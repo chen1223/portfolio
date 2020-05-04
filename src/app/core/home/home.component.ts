@@ -1,5 +1,5 @@
 import { JsonldService } from './../../shared/jsonld.service';
-import { Component, OnInit, Inject, PLATFORM_ID } from '@angular/core';
+import { Component, OnInit, Inject, PLATFORM_ID, Renderer2 } from '@angular/core';
 import { gsap } from 'gsap';
 import { Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
@@ -16,9 +16,11 @@ export class HomeComponent implements OnInit {
   // JSON LD schema
   schema = {};
   isBrowser = false;
+  ctaAnimation;
   constructor(private router: Router,
               private titleService: Title,
               private metaService: MetaService,
+              private render: Renderer2,
               private jsonldService: JsonldService,
               @Inject(PLATFORM_ID) private platformId) {
       this.isBrowser = isPlatformBrowser(this.platformId);
@@ -44,10 +46,23 @@ export class HomeComponent implements OnInit {
     const tl = gsap.timeline({ defaults: { duration: 1 } });
     tl.from('.title', { opacity: 0, y: -100 })
       .from('.desc-wrapper', { opacity: 0, y: -100 })
-      .from('.cta', { opacity: 0, x: -100 });
+      .from('.cta', { ease: 'none', opacity: 0, x: -100, duration: .45 });
   }
 
   addJsonLD(): void {
     this.schema = this.jsonldService.getHomeJSONLD();
+  }
+
+  // Navigate to works page
+  navToWorks(): void {
+    this.router.navigateByUrl('/works');
+  }
+
+  onBtnClick(e) {
+    e.preventDefault();
+    this.render.addClass(e.target, 'leave');
+    setTimeout(() => {
+      this.navToWorks();
+    }, 500);
   }
 }

@@ -1,5 +1,5 @@
 works:
-  - id: 11
+  - id: 12
     title: Perfume
     preview: perfume/perfume-l.png
     desc:
@@ -21,6 +21,33 @@ works:
       desktop: perfume/perfume-l.gif
       mobile: perfume/perfume-m.gif
       tablet: perfume/perfume-s.gif
+  - id: 11
+    title: Portfolio
+    preview: portfolio/portfolio-l.png
+    desc:
+      - As a Frontend developer, a work portfolio is an essential element to demonstrate his abilities. Not only would it showcase all projects you have worked with, but more importantly, it shows how your skills were built up and have grown over the time. In this portfolio website, I have included all projects that I have worked with. From the very first website that was built with Vanilla Javascript to server side rendering framework - Laravel, Single Page Application framework - Angular, and then to prototype and UI design tool - Balsamiq and AdobeXD. Through this website, you will be able to see my learning path, and works that I’ve done will continue to grow.
+      - This website was built with Angular 9 using the Mobile First approach. Everything was optimized for SEO. Media assets are stored on AWS S3 and deployed to AWS CloudFront for cross-region optimizations.
+    date: 2020-04
+    demoLink: https://www.billchen.cloud
+    sourceLink: https://github.com/chen1223/portfolio
+    technologies:
+      - Angular 9
+      - SCSS
+      - Responsive Web Design
+      - Mobile First Approach
+      - JSON LD
+      - SSR managed with pm2
+      - Ubuntu 18.04 server
+      - AWS S3
+      - AWS CloudFront
+    imgs:
+      desktop: portfolio/portfolio-l.png
+      tablet: portfolio/portfolio-m.png
+      mobile: portfolio/portfolio-s.png
+    gifs:
+      desktop: portfolio/portfolio-l.gif
+      mobile: portfolio/portfolio-m.gif
+      tablet: portfolio/portfolio-s.gif
   - id: 1
     title: UI Design Demonstrations
     preview: design-demo/design-demo-l.png

@@ -16,11 +16,18 @@
     font-weight: 700;
     width: calc(50% - .75em);
     text-align: center;
+    transition: all .3s;
+    &:hover {
+      transform: translateY(-5px);
+    }
     &.--main {
       background: $mainColorDark;
     }
     &.--sub {
       background: $subBtnColor;
+      &:hover {
+        background: $mainColorDark;
+      }
     }
   }
 }
