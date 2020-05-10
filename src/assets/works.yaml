@@ -19,8 +19,8 @@ works:
       mobile: perfume/perfume-s.png
     gifs:
       desktop: perfume/perfume-l.gif
-      mobile: perfume/perfume-m.gif
-      tablet: perfume/perfume-s.gif
+      tablet: perfume/perfume-m.gif
+      mobile: perfume/perfume-s.gif
   - id: 11
     title: Portfolio
     preview: portfolio/portfolio-l.png
@@ -46,8 +46,8 @@ works:
       mobile: portfolio/portfolio-s.png
     gifs:
       desktop: portfolio/portfolio-l.gif
-      mobile: portfolio/portfolio-m.gif
-      tablet: portfolio/portfolio-s.gif
+      tablet: portfolio/portfolio-m.gif
+      mobile: portfolio/portfolio-s.gif
   - id: 1
     title: UI Design Demonstrations
     preview: design-demo/design-demo-l.png
