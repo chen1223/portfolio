@@ -27,10 +27,24 @@ li {
   margin-top: .2em;
 }
 .img-wrapper {
-  min-height: 300px;
   background: $imgLoadingBg;
   position: relative;
   overflow: hidden;
+  &.img-loaded:hover:after {
+    opacity: .6;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0.5em;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: $mainColor;
+    transition: all .25s ease-in-out;
+    z-index: 1;
+    opacity: 0;
+  }
   &.img-loaded {
     background: unset;
     min-height: unset;
@@ -49,30 +63,19 @@ li {
     flex-wrap: wrap;
     justify-content: space-between;
     .work {
-      width: calc(50% - 1em);
+      width: calc(33% - 1em);
       margin-bottom: 2em;
     }
   }
-  .img-wrapper {
-    min-height: 200px;
-  }
 }
-@media (orientation: portrait) {
-  @media (min-width: 280px) and (max-width: 767px) {
-    .img-wrapper {
-      min-height: 200px;
-    }
-  }
-  @media (min-width: 1000px) {
-    .img-wrapper {
-      min-height: 250px;
-    }
-  }
-}
-@media (orientation: landscape) {
-  @media (min-width: 1000px) {
-    .img-wrapper {
-      min-height: 300px;
+@media (min-width: 479px) and (max-width: 767px) {
+  .work-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .work {
+      width: calc(50% - 1em);
+      margin-bottom: 2em;
     }
   }
 }
