@@ -62,7 +62,7 @@ strong {
   overflow: hidden;
 }
 .skill-title {
-  color: $mainColorDark;
+  color: $titleColor;
   font-weight: bold;
   font-size: 1.56em;
   margin: .5em 0;
@@ -74,17 +74,17 @@ strong {
   display: flex;
 }
 .skill-header {
-  background: white;
+  background: none;
   width: 100%;
   border-radius: 10px;
   .skill-field {
     font-size: 1.125em;
     font-weight: bold;
-    color: $mainColorDark;
+    color: $titleColor;
   }
 }
 .inner-card-wrapper {
-  background: white;
+  background: #9ac5e0;
   border-radius: 10px;
   padding: 1.5em;
   transition: all .5s ease-in-out;
@@ -101,19 +101,18 @@ strong {
     flex-wrap: wrap;
     justify-content: space-between;
     .skill {
-      padding-left: 1.1em;
+      padding-left: .8em;
       position: relative;
       width: 50%;
       font-weight: 500;
       margin-bottom: .5em;
-      color: #333;
+      color: #2c4656;
       &:before {
         content: '';
         margin-right: 0.5em;
-        color: #5F8CA8;
-        width: 8px;
-        height: 8px;
-        background: #5F8CA9;
+        width: 5px;
+        height: 5px;
+        background: #2c4656;
         border-radius: 50%;
         position: absolute;
         left: 0em;
