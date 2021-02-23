@@ -15,7 +15,7 @@ export class AboutService {
   loadSkills(): Observable<any> {
     return new Observable(observer => {
       if (this.skills.length === 0) {
-        this.http.get('/assets/skills.yaml', {
+        this.http.get('https://billchen-cloud.s3-us-west-1.amazonaws.com/project-assets/skills.yaml', {
           observe: 'body',
           responseType: 'text'
         }).pipe(map(txt => {

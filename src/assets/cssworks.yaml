@@ -1,4 +1,16 @@
 works:
+  - title: Box Shadow vs Drop Shadow
+    codepenId: RwGmjLv
+    preview: codepen/box-shadow-drop-shadow.png
+    demoLink: https://codepen.io/chen1223/pen/RwGmjLv
+  - title: Masonry Card using Columns
+    codepenId: gOwoZge
+    preview: codepen/masonry-card.png
+    demoLink: https://codepen.io/chen1223/pen/gOwoZge
+  - title: Glassmorphism Credit Card
+    codepenId: LYRxPYL
+    preview: codepen/glassmorphism-credit-card.png
+    demoLink: https://codepen.io/chen1223/pen/LYRxPYL
   - title: Loading animation - Spinning reel
     codepenId: GRgeqgw
     preview: codepen/spinning-reel.gif

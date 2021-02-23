@@ -18,7 +18,7 @@ export class WorkService {
 
   loadWorks(): void {
     if (this.works.length === 0) {
-      this.http.get(`${APP_DOMAIN}/assets/works.yaml`, {
+      this.http.get('https://billchen-cloud.s3-us-west-1.amazonaws.com/project-assets/works.yaml', {
         observe: 'body',
         responseType: 'text'
       }).pipe(

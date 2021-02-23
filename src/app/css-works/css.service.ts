@@ -14,7 +14,7 @@ export class CssService {
 
   getWorks(): Observable<any> {
     return new Observable(observer => {
-      this.http.get(`${APP_DOMAIN}/assets/cssworks.yaml`, {
+      this.http.get('https://billchen-cloud.s3-us-west-1.amazonaws.com/project-assets/cssworks.yaml', {
         observe: 'body',
         responseType: 'text'
       }).pipe(map(txt => {
