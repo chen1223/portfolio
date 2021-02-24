@@ -73,7 +73,7 @@ export class WorkComponent implements OnInit {
   addMetaTag(): void {
     const title = `${this.workData.title} - Bill Chen`;
     const desc = this.workData.desc[0];
-    const img = this.workData.imgs.desktop;
+    const img = `${this.assetPrefix}/${this.workData.imgs.desktop}`;
     this.metaService.addPageMeta(title, desc);
     this.metaService.addFBTag(title, desc, 'website', img, title, APP_DOMAIN + this.router.url);
   }
