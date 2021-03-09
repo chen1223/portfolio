@@ -1,4 +1,8 @@
 works:
+  - title: Light / Dark Mode Toggle
+    codepenId: RwGmjLv
+    preview: codepen/light-dark-mode-toggle.gif
+    demoLink: https://codepen.io/chen1223/pen/PobxwMj
   - title: Box Shadow vs Drop Shadow
     codepenId: RwGmjLv
     preview: codepen/box-shadow-drop-shadow.png
