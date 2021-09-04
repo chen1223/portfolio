@@ -10,8 +10,8 @@
     "e2e": "ng e2e",
     "dev:ssr": "ng run portfolio:serve-ssr",
     "serve:ssr": "node dist/portfolio/server/main.js",
-    "build:ssr": "ng build --prod && ng run portfolio:server:production",
-    "build:ssr-local": "ng build && ng run portfolio:server:production",
+    "build:ssr": "ng build --prod --base-href \"https://billchen.cloud/\" --deploy-url \"https://billchen.cloud/\" && ng run portfolio:server:production",
+    "build:ssr-local": "ng build --prod --aot && ng run portfolio:server:production",
     "prerender": "ng run portfolio:prerender"
   },
   "private": true,
