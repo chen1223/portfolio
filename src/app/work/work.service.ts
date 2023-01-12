@@ -77,7 +77,7 @@ export class WorkService {
       return new Observable(observer => {
         this.loadComplete.pipe(first()).subscribe(
           () => {
-            observer.next(this.works.find(w => +w.id === +id));
+            observer.next(this.works.find(w => w.id === id));
             observer.complete();
           }
         );
@@ -86,7 +86,7 @@ export class WorkService {
     } else {
       return new Observable((observer) => {
         observer.next(
-          this.works.find(w => +w.id === +id)
+          this.works.find(w => w.id === id)
         );
         observer.complete();
       });
