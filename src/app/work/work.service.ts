@@ -77,7 +77,8 @@ export class WorkService {
       return new Observable(observer => {
         this.loadComplete.pipe(first()).subscribe(
           () => {
-            observer.next(this.works.find(w => w.title === id));
+            const work = this.works.find(w => w.id === id);
+            observer.next(work);
             observer.complete();
           }
         );
