@@ -72,12 +72,12 @@ export class WorkService {
   }
 
   // Get one specific work
-  getWork(id: number): Observable<any> {
+  getWork(id: string): Observable<any> {
     if (this.works.length === 0) {
       return new Observable(observer => {
         this.loadComplete.pipe(first()).subscribe(
           () => {
-            observer.next(this.works.find(w => w.id === id));
+            observer.next(this.works.find(w => w.title === id));
             observer.complete();
           }
         );
